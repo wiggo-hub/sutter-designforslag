@@ -13,7 +13,7 @@
 /* Layout: white gallery wall. Full-width slideshow opens; each body of work = large frame + 2x2 frame of four, equal height; caption + exposure data under the large frame. */
 :root{
   --bg:#f4f4f2; --surface:#ffffff; --ink:#1a1c1b; --muted:#666c69; --line:#dadcd9; --accent:#1f4e6b;
-  --on-img:#ffffff; --scrim:rgba(10,12,11,.55);
+  --on-img:#ffffff; --bar:#141615; --bar-ink:#e9ebe9; --bar-hi:#9cc0d8; --scrim:rgba(10,12,11,.55);
   --display:"Jost","Futura","Century Gothic",Arial,sans-serif;
   --body:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
@@ -43,6 +43,10 @@ h2{font-family:var(--display); font-weight:300; text-transform:uppercase; font-s
 .menu{display:flex; gap:clamp(10px,1.4vw,22px); list-style:none; margin:0; padding:0; font-size:.9rem}
 .menu a{text-decoration:none; opacity:.85}
 .menu a:hover,.menu a:focus-visible{opacity:1; text-decoration:underline; text-underline-offset:5px}
+.menu a.on{opacity:1; text-decoration:underline; text-underline-offset:5px}
+.top.bar,.top.bar.solid{background:var(--bar); color:var(--bar-ink); border-color:rgba(255,255,255,.08); backdrop-filter:none}
+.top.bar .menu a.on{color:var(--bar-hi); text-decoration:none}
+.top.bar .wrap{padding-block:10px}
 .burger{display:none; background:none; border:0; color:inherit; font:inherit; font-size:.9rem; cursor:pointer; padding:6px 0}
 
 /* Slideshow */
@@ -170,6 +174,7 @@ footer .wrap{display:flex; justify-content:space-between; gap:16px; flex-wrap:wr
   .burger{display:block}
   .top.open .menu{display:flex; flex-direction:column; position:absolute; top:100%; left:0; right:0; background:var(--bg); color:var(--ink); padding:12px var(--gut) 20px; gap:10px; border-bottom:1px solid var(--line)}
 }
+@media (max-width:1100px){ .top.bar.open .menu{background:var(--bar); color:var(--bar-ink); border-color:rgba(255,255,255,.08)} }
 @media (max-width:860px){
   .intro{grid-template-columns:1fr}
   .services{grid-template-columns:1fr 1fr}
@@ -341,6 +346,12 @@ const burger=document.getElementById('burger');
 burger.onclick=()=>{const o=hdr.classList.toggle('open'); burger.setAttribute('aria-expanded',o); setSolid()};
 document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>{hdr.classList.remove('open'); burger.setAttribute('aria-expanded',false); setSolid()}));
 
+/* Variant: black menu bar (svart.html or #svart) */
+if (document.documentElement.dataset.meny==='svart' || location.hash==='#svart') hdr.classList.add('bar');
+/* Highlight the section in view */
+const links=[...document.querySelectorAll('#menu a')];
+const spy=()=>{let cur=null; for(const a of links){const t=document.querySelector(a.getAttribute('href')); if(t && t.getBoundingClientRect().top < innerHeight*0.35) cur=a;} links.forEach(a=>a.classList.toggle('on',a===cur));};
+addEventListener('scroll',spy,{passive:true}); spy();
 /* Index tiles */
 const tiles=document.getElementById('tiles');
 works.forEach(w=>{tiles.insertAdjacentHTML('beforeend',`<li><a href="#${w.id}"><img src="${w.items[0].src||w.items[0].poster}" alt="" loading="lazy"><span class="lbl"><b>${w.title}</b><span>${w.no}</span></span></a></li>`)});

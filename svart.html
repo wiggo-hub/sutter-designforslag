@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="nb" data-meny="svart">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="author" content="Jan Wiggo Wiger">
+<meta name="robots" content="noindex">
+<title>Sutter Reklamefoto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+/* Layout: white gallery wall. Full-width slideshow opens; each body of work = large frame + 2x2 frame of four, equal height; caption + exposure data under the large frame. */
+:root{
+  --bg:#f4f4f2; --surface:#ffffff; --ink:#1a1c1b; --muted:#666c69; --line:#dadcd9; --accent:#1f4e6b;
+  --on-img:#ffffff; --bar:#141615; --bar-ink:#e9ebe9; --bar-hi:#9cc0d8; --scrim:rgba(10,12,11,.55);
+  --display:"Jost","Futura","Century Gothic",Arial,sans-serif;
+  --body:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --s-1:.8rem; --s0:1rem; --s1:1.2rem; --s2:1.6rem; --s3:clamp(2rem,4.6vw,3.6rem); --s4:clamp(2.8rem,9vw,7.5rem);
+  --wrap:1320px; --gut:clamp(16px,4vw,56px); --gap:10px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#131514; --surface:#1b1e1d; --ink:#ebecea; --muted:#9ca29f; --line:#2b302e; --accent:#9cc0d8; color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#131514; --surface:#1b1e1d; --ink:#ebecea; --muted:#9ca29f; --line:#2b302e; --accent:#9cc0d8; color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--body); font-size:var(--s0); line-height:1.6}
+a{color:inherit}
+.wrap{max-width:var(--wrap); margin-inline:auto; padding-inline:var(--gut)}
+.eyebrow{font-family:var(--mono); font-size:var(--s-1); letter-spacing:.06em; color:var(--muted); font-variant-numeric:tabular-nums}
+h2{font-family:var(--display); font-weight:300; text-transform:uppercase; font-size:var(--s3); line-height:1; letter-spacing:.01em; margin:0; text-wrap:balance}
+
+/* Header: sits on the slideshow, turns solid after it */
+.top{position:fixed; top:0; left:0; right:0; z-index:30; padding-top:env(safe-area-inset-top,0px); color:var(--on-img); transition:background .3s, color .3s, border-color .3s; border-bottom:1px solid transparent}
+.top.solid{background:color-mix(in srgb,var(--bg) 94%,transparent); color:var(--ink); border-color:var(--line); backdrop-filter:blur(10px)}
+.top .wrap{display:flex; align-items:center; justify-content:space-between; gap:20px; padding-block:14px}
+.logo{text-decoration:none; font-family:var(--display); text-transform:uppercase; line-height:.95; font-weight:300; font-size:1.15rem; letter-spacing:.01em}
+.logo span{display:block}
+.logo strong{font-weight:400}
+.menu{display:flex; gap:clamp(10px,1.4vw,22px); list-style:none; margin:0; padding:0; font-size:.9rem}
+.menu a{text-decoration:none; opacity:.85}
+.menu a:hover,.menu a:focus-visible{opacity:1; text-decoration:underline; text-underline-offset:5px}
+.menu a.on{opacity:1; text-decoration:underline; text-underline-offset:5px}
+.top.bar,.top.bar.solid{background:var(--bar); color:var(--bar-ink); border-color:rgba(255,255,255,.08); backdrop-filter:none}
+.top.bar .menu a.on{color:var(--bar-hi); text-decoration:none}
+.top.bar .wrap{padding-block:10px}
+.burger{display:none; background:none; border:0; color:inherit; font:inherit; font-size:.9rem; cursor:pointer; padding:6px 0}
+
+/* Slideshow */
+.hero{position:relative; height:min(88svh,64vw); min-height:420px; overflow:hidden; background:#0c0d0d; color:var(--on-img)}
+.hero .slide{position:absolute; inset:0; opacity:0; transition:opacity 1.4s ease}
+.hero .slide.on{opacity:1}
+.hero .slide img{width:100%; height:100%; object-fit:cover; transform:scale(1.06); transition:transform 7s linear}
+.hero .slide.on img{transform:scale(1)}
+.hero::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(0,0,0,.35) 0,transparent 22%,transparent 50%,rgba(0,0,0,.6) 100%); pointer-events:none}
+.hero-text{position:absolute; left:0; right:0; bottom:clamp(28px,6vw,72px); z-index:2}
+.hero-claim{position:absolute; left:0; right:0; top:calc(env(safe-area-inset-top,0px) + clamp(84px,9vw,120px)); z-index:2}
+.hero h1,.hero p{text-shadow:0 1px 12px rgba(0,0,0,.35)}
+.hero .claim{font-family:var(--display); font-weight:300; text-transform:uppercase; font-size:clamp(1.4rem,3.4vw,2.8rem); line-height:1.1; margin:0; max-width:24ch; text-wrap:balance}
+.hero .mark{font-family:var(--display); font-weight:200; text-transform:uppercase; font-size:clamp(1.5rem,3vw,2.6rem); line-height:.95; margin:0; letter-spacing:-.005em}
+.hero h1 strong{font-weight:400}
+.hero .slogan{font-style:italic; font-size:clamp(1rem,1.8vw,1.35rem); margin:.7em 0 0; opacity:.95}
+.hero-meta{display:flex; justify-content:space-between; align-items:flex-end; gap:16px; margin-top:clamp(20px,3vw,36px); flex-wrap:wrap}
+.hero-meta .now{font-family:var(--mono); font-size:var(--s-1); letter-spacing:.06em}
+.bars{display:flex; gap:6px}
+.bars button{all:unset; cursor:pointer; width:28px; height:14px; position:relative}
+.bars button::before{content:""; position:absolute; left:0; right:0; top:6px; height:2px; background:rgba(255,255,255,.35)}
+.bars button.on::before{background:#fff}
+.bars button:focus-visible{outline:1px solid #fff}
+
+/* Intro */
+.intro{padding-block:clamp(64px,9vw,128px) clamp(40px,6vw,72px); display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); gap:clamp(28px,6vw,96px); align-items:end}
+.intro .big{font-family:var(--display); font-weight:300; font-size:clamp(1.6rem,3.2vw,2.6rem); line-height:1.2; margin:0; text-wrap:balance}
+.intro p{margin:0; max-width:52ch; color:var(--muted)}
+.services{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+.services div{padding:22px 0 26px; padding-right:16px}
+.services div + div{border-left:1px solid var(--line); padding-left:20px}
+.services b{display:block; font-family:var(--display); font-weight:400; text-transform:uppercase; letter-spacing:.04em; font-size:var(--s1)}
+.services span{color:var(--muted); font-size:.92rem}
+
+/* Index of work */
+.index{padding-block:clamp(64px,8vw,112px) 0}
+.index-head{display:flex; justify-content:space-between; align-items:end; gap:16px; margin-bottom:24px; flex-wrap:wrap}
+.tiles{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); grid-auto-rows:clamp(180px,21vw,300px); gap:var(--gap); list-style:none; margin:0; padding:0}
+.tiles li:first-child{grid-column:span 2}
+.tiles a{display:block; position:relative; height:100%; overflow:hidden; text-decoration:none; color:var(--on-img); background:#0c0d0d}
+.tiles img{width:100%; height:100%; object-fit:cover; transition:transform .7s ease, opacity .4s}
+.tiles a:hover img,.tiles a:focus-visible img{transform:scale(1.04); opacity:.85}
+.tiles .lbl{position:absolute; inset:auto 0 0 0; padding:40px 16px 14px; background:linear-gradient(transparent,rgba(0,0,0,.6)); display:flex; justify-content:space-between; align-items:baseline; gap:8px}
+.tiles .lbl b{font-family:var(--display); font-weight:400; text-transform:uppercase; letter-spacing:.03em; font-size:1.05rem}
+.tiles .lbl span{font-family:var(--mono); font-size:.72rem; opacity:.85}
+
+/* Work section */
+.work{padding-block:clamp(72px,9vw,128px) 0}
+.work-head{display:grid; grid-template-columns:minmax(0,3fr) minmax(0,2fr); gap:var(--gap) clamp(24px,4vw,48px); align-items:end; margin-bottom:22px}
+.work-head p{margin:0; color:var(--muted); max-width:46ch}
+.txt p{margin:0 0 .7em; color:var(--muted); max-width:52ch}
+.txt p:last-child{margin-bottom:0}
+.more{all:unset; cursor:pointer; color:var(--accent); font-size:.9rem; margin-top:6px; display:inline-block}
+.more:focus-visible{outline:1px solid var(--accent)}
+.work-head{align-items:start}
+.work-head h2{font-size:clamp(1.8rem,3.6vw,3rem)}
+.work-head .eyebrow{grid-column:1/-1; margin-bottom:-6px}
+
+.gal{display:grid; grid-template-columns:minmax(0,3fr) minmax(0,2fr); gap:var(--gap); align-items:stretch}
+.frame{position:relative; aspect-ratio:3/2; overflow:hidden; background:var(--surface); max-width:100%}
+.frame img,.frame video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:opacity .35s ease}
+.frame.fit img{object-fit:contain}
+.frame.fade img,.frame.fade video{opacity:0}
+.frame .open{all:unset; position:absolute; inset:0; cursor:zoom-in}
+.frame .open:focus-visible{outline:2px solid var(--accent); outline-offset:-4px}
+.frame .arrow{position:absolute; top:12px; width:42px; height:42px; border:0; background:var(--scrim); color:#fff; font-size:1.2rem; cursor:pointer; z-index:2}
+.frame .prev{right:58px} .frame .next{right:12px}
+.frame .arrow:hover{background:rgba(10,12,11,.8)}
+.four{display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:var(--gap); list-style:none; margin:0; padding:0; min-height:0}
+.four li{min-height:0; min-width:0}
+.four button{all:unset; cursor:pointer; display:block; width:100%; height:100%; position:relative; overflow:hidden; background:var(--surface)}
+.four img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s ease, filter .4s}
+.four button:hover img{transform:scale(1.05)}
+.four button:focus-visible{outline:2px solid var(--accent); outline-offset:-2px}
+.four .tag{position:absolute; left:8px; top:8px; background:var(--scrim); color:#fff; font-family:var(--mono); font-size:.68rem; padding:2px 7px; letter-spacing:.06em}
+.ph{position:absolute; inset:0; display:grid; place-content:center; text-align:center; gap:4px; background:var(--surface); color:var(--muted)}
+.ph b{font-family:var(--display); font-weight:300; text-transform:uppercase; font-size:clamp(1rem,2vw,1.6rem); color:var(--ink)}
+.cap{display:grid; grid-template-columns:minmax(0,3fr) minmax(0,2fr); gap:var(--gap); padding-top:14px}
+.cap h3{margin:0; font-size:var(--s1); font-weight:600}
+.cap p{margin:2px 0 0; color:var(--muted); max-width:56ch}
+.cap .exif{font-family:var(--mono); font-size:.74rem; color:var(--muted); text-align:left; align-self:start; padding-top:4px; font-variant-numeric:tabular-nums}
+.cap .exif b{color:var(--ink); font-weight:400}
+
+/* About */
+.about{padding-block:clamp(80px,10vw,140px) 0}
+.about-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(28px,6vw,96px); margin-top:clamp(40px,5vw,64px)}
+.about-grid .lead{font-family:var(--display); font-weight:300; font-size:clamp(1.4rem,2.4vw,2rem); line-height:1.25; margin:0 0 1em}
+.about-grid p{max-width:58ch}
+.route{list-style:none; margin:0; padding:0; border-top:1px solid var(--line)}
+.route li{display:grid; grid-template-columns:110px minmax(0,1fr); gap:16px; padding:16px 0; border-bottom:1px solid var(--line)}
+.route .eyebrow{padding-top:3px}
+.route b{display:block; font-weight:600}
+.route span{color:var(--muted)}
+
+/* Contact */
+.contact{padding-block:clamp(80px,10vw,140px)}
+.contact-grid{display:grid; grid-template-columns:minmax(0,3fr) minmax(0,2fr); gap:clamp(20px,4vw,56px); margin-top:28px; align-items:start}
+.contact h2{font-size:clamp(1.8rem,3.6vw,3rem); max-width:24ch}
+.form{display:grid; gap:6px; max-width:560px}
+.form .hint{margin:0 0 12px; color:var(--muted); max-width:52ch}
+.form label{font-size:.85rem; font-weight:500; margin-top:8px}
+.form input,.form textarea{font:inherit; color:var(--ink); background:var(--surface); border:1px solid var(--line); padding:10px 12px; border-radius:0; width:100%}
+.form input:focus,.form textarea:focus{outline:2px solid var(--accent); outline-offset:-1px}
+.form button{font:inherit; margin-top:14px; justify-self:start; background:var(--ink); color:var(--bg); border:0; padding:12px 22px; cursor:pointer}
+.form button:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+.form .status{margin:6px 0 0; font-size:.9rem; color:var(--muted); min-height:1.4em}
+.cards{display:grid; gap:var(--gap)}
+.c{background:var(--surface); padding:24px; border:1px solid var(--line)}
+.c .eyebrow{display:block; margin-bottom:6px}
+.c .v{font-family:var(--display); font-size:clamp(1.3rem,2vw,1.7rem); font-weight:300; user-select:all; overflow-wrap:anywhere}
+.copy{all:unset; cursor:pointer; margin-top:10px; font-size:.82rem; color:var(--accent); display:inline-block}
+.copy:focus-visible{outline:1px solid var(--accent)}
+footer{border-top:1px solid var(--line); padding-block:28px; color:var(--muted); font-size:.85rem}
+footer .wrap{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap}
+
+/* Lightbox */
+.lb{position:fixed; inset:0; z-index:50; background:rgba(8,9,9,.94); display:grid; place-items:center; padding:max(16px,env(safe-area-inset-top,0px)) 16px}
+.lb img{max-width:100%; max-height:84svh; object-fit:contain}
+.lb figcaption{color:#e8e8e6; font-size:.9rem; margin-top:10px; text-align:left}
+.lb .x{position:absolute; top:calc(12px + env(safe-area-inset-top,0px)); right:16px; background:none; border:0; color:#fff; font-size:2rem; cursor:pointer; line-height:1}
+.lb .x:focus-visible{outline:1px solid #fff}
+
+@media (max-width:1100px){
+  .menu{display:none}
+  .burger{display:block}
+  .top.open .menu{display:flex; flex-direction:column; position:absolute; top:100%; left:0; right:0; background:var(--bg); color:var(--ink); padding:12px var(--gut) 20px; gap:10px; border-bottom:1px solid var(--line)}
+}
+@media (max-width:1100px){ .top.bar.open .menu{background:var(--bar); color:var(--bar-ink); border-color:rgba(255,255,255,.08)} }
+@media (max-width:860px){
+  .intro{grid-template-columns:1fr}
+  .services{grid-template-columns:1fr 1fr}
+  .services div:nth-child(3){border-left:0; padding-left:0}
+  .services div:nth-child(n+3){border-top:1px solid var(--line)}
+  .tiles{grid-template-columns:1fr 1fr}
+  .tiles{grid-auto-rows:clamp(130px,34vw,220px)}
+  .tiles li:first-child{grid-column:auto}
+  .work-head{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr}
+  .four{grid-template-columns:repeat(4,1fr); grid-template-rows:auto}
+  .four button{aspect-ratio:1; height:auto}
+  .cap{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media (max-width:480px){ .tiles .lbl{padding:28px 10px 10px} .tiles .lbl b{font-size:.85rem} .tiles .lbl span{display:none} .route li{grid-template-columns:1fr; gap:2px} }
+@media (prefers-reduced-motion:reduce){*{transition:none!important} html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="#start" aria-label="Sutter Reklamefoto, til toppen"><span>Sutter</span><span>Reklame<strong>foto</strong></span></a>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu">Meny</button>
+    <ul class="menu" id="menu">
+      <li><a href="#drone">Dronefoto/video</a></li>
+      <li><a href="#interior">Inne/Ute</a></li>
+      <li><a href="#portretter">Mennesker</a></li>
+      <li><a href="#produkter">Produkter</a></li>
+      <li><a href="#mat">Mat</a></li>
+      <li><a href="#diverse">Diverse</a></li>
+      <li><a href="#grunderiet">SNF/Gründeriet</a></li>
+      <li><a href="#paul">Pauls historie</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero" id="start" aria-label="Utvalgte bilder">
+  <div id="slides"></div>
+  <div class="hero-claim"><div class="wrap"><h1 class="claim">Paul Sutter - din bedrifts fotograf i Vestfold</h1></div></div>
+  <div class="hero-text"><div class="wrap">
+    <p class="mark">Sutter<br>Reklame<strong>foto</strong></p>
+    <p class="slogan">– kvalitetsfotografering i over 50 år!</p>
+    <div class="hero-meta"><span class="now" id="now"></span><div class="bars" id="bars" role="tablist" aria-label="Velg bilde"></div></div>
+  </div></div>
+</section>
+
+
+<section class="wrap index" id="arbeider">
+  <div class="index-head"><h2>Arbeider</h2><span class="eyebrow">8 områder</span></div>
+  <ul class="tiles" id="tiles"></ul>
+</section>
+
+<main id="works"></main>
+
+<section class="wrap contact" id="kontakt">
+  <h2>Kontakt meg for avtale, pris eller befaring</h2>
+  <div class="contact-grid">
+    <form class="form" id="form" novalidate>
+      <p class="hint">Telefon besvares mellom 09:00 og 17:00, mandag til fredag. Utenom arbeidstiden kan du bruke kontaktskjemaet her eller sende en mail.</p>
+      <label for="f-navn">Navn</label><input id="f-navn" name="navn" autocomplete="name">
+      <label for="f-epost">E-post</label><input id="f-epost" name="epost" type="email" autocomplete="email">
+      <label for="f-melding">Melding</label><textarea id="f-melding" name="melding" rows="5" placeholder="Skriv din melding her"></textarea>
+      <button type="submit">Send melding</button>
+      <p class="status" id="f-status" aria-live="polite"></p>
+    </form>
+    <div class="cards">
+      <div class="c"><span class="eyebrow">Mob</span><div class="v" id="tel">+47 906 86 047</div><button class="copy" type="button" data-copy="tel">Kopier nummer</button></div>
+      <div class="c"><span class="eyebrow">Mail</span><div class="v" id="mail">paulsutter48@gmail.com</div><button class="copy" type="button" data-copy="mail">Kopier adresse</button></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>© Sutter Reklamefoto · Sandefjord</span><span>Designforslag. Bildetekstene er eksempler.</span></div></footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Bilde i fullskjerm">
+  <button class="x" id="lbx" type="button" aria-label="Lukk">×</button>
+  <figure style="margin:0"><img id="lbimg" alt=""><figcaption id="lbcap"></figcaption></figure>
+</div>
+
+<script>
+const I=f=>'img/'+f;
+const works=[
+ {id:'drone', no:'01', title:"Dronefoto/video", head:null, text:["Jeg tilbyr video- og fotografering med drone.", "Dronen gjør at vi får sett ting fra nye vinkler - noe som gir uante muligheter sett med fotografens øyne.", "Næringslivsbedrifter kan slik presentere seg på en helt ny og annerledes måte.", "Jeg har laget flere bedrifter dronevideoer for bedrifter i Sandefjordregionen.", "Se hvordan de presenteres her."], items:[
+  {src:I('01-hovedbilde.jpg'), t:'Kajakkpadling', d:'Kajakker sett rett ovenfra.'},
+  {video:I('fpv.mp4'), poster:I('fpv-poster.jpg'), t:'FPV-film', d:'Kort film fra FPV-drone. Spilles av i rammen.'},
+  {src:I('00-forsidebilde.jpg'), t:'Kamera og droner', d:'Bak kulissene ved sjøen.'},
+  {ph:'Bryde', t:'Bryde', d:'Film med tale. Legges inn fra YouTube eller Vimeo.'},
+  {ph:'Kajakk', t:'Kajakk', d:'Dronefilm. Legges inn fra YouTube eller Vimeo.'},
+ ]},
+ {id:'interior', no:'02', title:"Inne/Ute", head:null, text:["Jeg har valgt å samle alt av interiør- og eksteriørbilder under kategorien «Ute/Inne».", "Norpeis har en solid plass i min portefølje - og du kan se nærmere på mine stemningsfulle peisbilder og andre motiver her."], items:[
+  {src:I('02-hovedbilde.jpg'), t:'Stue med peis', d:'Lys stue med utsikt over sjøen.', exif:'Phase One P25'},
+  {src:I('02-trapp.jpg'), t:'Trapperom', d:'Svingtrapp med blyglassvinduer.', exif:'Nikon D800 · 24 mm · f/8 · 1/2 s · ISO 320 · 2020'},
+  {src:I('02-svingete-vei.jpg'), t:'Svingete vei', d:'Landevei gjennom grønne jorder.', exif:'Nikon D2X · 70 mm · f/7,1 · 1/250 s · ISO 100 · 2008'},
+  {src:I('02-ryen-studio.jpg'), t:'Studio på Ryen', d:'Studiolokale fotografert med fiskeøye.', exif:'Nikon D2X · 10,5 mm · f/4 · 1/3 s · ISO 100 · 2008'},
+  {src:I('07-vy-grefsen.jpg'), t:'Grefsen stasjon', d:'Tog og stasjonsbygning.', exif:'Nikon D800 · 24 mm · f/11 · 1/320 s · ISO 320 · 2019'},
+ ]},
+ {id:'portretter', no:'03', title:"Mennesker", head:"Bildet er øyeblikkets kunst", text:["Øyeblikket. Følelsen. Stemningen. Nettopp å fange dette i et bilde er kunsten, og min – og enhver fotografs klare ambisjon.", "Jeg har fotografert mennesker i alle aldre, fasonger og situasjoner i en årrekke.", "Her kan du se et utvalg av morsomme, fargerike og stemningsfulle bilder av små og store.", "Alle med sitt særpreg og egenart fanget av kameraet i det eksakt riktige øyeblikket."], items:[
+  {src:I('03-hovedbilde.jpg'), t:'Sommer', d:'Modeller som løper ut i sjøen.', exif:'Nikon D1X · 112 mm · f/2,8 · 1/2500 s · ISO 125 · 2004'},
+  {src:I('03-anita-hvalmonument.jpg'), t:'Anita', d:'Portrett ved Hvalfangstmonumentet.', exif:'Nikon D800 · 70 mm · f/2,8 · 1/1600 s · ISO 100 · 2024'},
+  {src:I('03-christer.jpg'), t:'Christer', d:'Næringslivsportrett utendørs.', exif:'Nikon D800 · 210 mm · f/4 · 1/320 s · ISO 400 · 2024'},
+  {src:I('03-ordfrer.jpg'), t:'Ordføreren', d:'Portrett med ordførerkjede.', exif:'Nikon D800 · 70 mm · f/5 · 1/250 s · ISO 1600 · 2025'},
+  {src:I('07-modell-hamresanden.jpg'), t:'Hamresanden', d:'Modell på stranden.', exif:'Nikon D1X · 240 mm · f/4 · 1/1250 s · ISO 125 · 2004'},
+ ]},
+ {id:'produkter', no:'04', title:"Produkter", head:"Fang øyeblikket - det kommer aldri tilbake!", text:["Produktfotografering har jeg virkelig svært lang erfaring med.", "I «gamle dager» var Coop, Nordea, Norpeis, Wilfa, Høvik Lys og mange andre kunder som jeg betjente over lang tid.", "Noen av disse bildene kan du se her, sammen med nyere bilder.", "Jeg tilbyr fotografering fra eget studio i Sandefjord eller på location hos kunden."], items:[
+  {src:I('04-hovedbilde.jpg'), t:'Lommeur', d:'Stillbilde med bevegelse og lys.', exif:'Nikon D800 · 55 mm · f/5,6 · 1/10 s · ISO 110 · 2019'},
+  {src:I('04-casa-peis.jpg'), t:'Casa peis', d:'Detalj av ovn med flammer.', exif:'Phase One P25'},
+  {src:I('04-dressing.jpg'), t:'Dressing', d:'Produkt i miljø med råvarer.', exif:'Nikon D800 · 60 mm · f/11 · 1/160 s · ISO 2000 · 2021'},
+  {src:I('04-tip-spesial.jpg'), t:'TIP Spesial', d:'Merketape på hvit bakgrunn.', exif:'Nikon D800 · 110 mm · f/20 · 1/80 s · ISO 800 · 2021'},
+  {src:I('04-wilfa-mixer.jpg'), t:'Wilfa mikser', d:'Frilagt produkt for katalog.', exif:'Phase One P45+ · 1/60 s · ISO 100 · 2010', fit:true},
+ ]},
+ {id:'mat', no:'05', title:"Mat", head:"Den unike formen trigger kreativiteten", text:["Matfotografering er i utgangspunktet meget komplisert og utfordrende. Varm mat må se varm ut, og samtidig skal alle matbilder se delikate og innbydende ut. Her kreves kompetanse!", "Jeg har i en årrekke hatt oppdrag for ulike store og små mataktører. Og nylig har jeg blant annet tatt alle bildene til «Den store vaffelboken».", "Noen av disse vaffelbildene kan du se nærmere på her, pluss at du finner et utvalg av andre matopptak.", "Velbekomme!"], items:[
+  {src:I('05-hovedbilde.jpg'), t:'Egg', d:'Enkel komposisjon i hvitt.', exif:'Phase One P25 · ISO 100 · 2005'},
+  {src:I('05-vaffel-ute.jpg'), t:'Vafler ute', d:'Vafler med bær på terrassebordet.'},
+  {src:I('05-vaffel-inne.jpg'), t:'Vafler inne', d:'Vafler med brunost på fjøl.'},
+  {src:I('05-napoleonskake.jpg'), t:'Napoleonskake', d:'Kake og kaffe i varmt lys.', exif:'Phase One P25 · ISO 100 · 2005'},
+  {src:I('05-fisk.jpg'), t:'Makrell', d:'Fiskestim i blått vann.'},
+ ]},
+ {id:'diverse', no:'07', title:"Diverse", head:"Kuer er ålreite dyr!", text:["Mange av bildene som jeg har tatt opp gjennom årene, kan tilhøre flere kategorier.", "I tillegg til de 3 originale kuene, har vi samlet en miks med den søte hunden Cleo og andre dyr, mennesker og produkter. Her finner du også papegøyen Polly - som ble logoen til firmaet Tropisk Design.", "Det har blitt en fargerik og morsom miks av gammelt og nytt.", "God fornøyelse!"], items:[
+  {src:I('07-hovedbilde.jpg'), t:'Kyr på beite', d:'Ku og kalver i sommerlandskap.'},
+  {src:I('07-twin-towers.jpg'), t:'New York', d:'Fra helikopteret over Manhattan.'},
+  {src:I('07-vy-grefsen.jpg'), t:'Vy, Grefsen', d:'Tog ved Grefsen stasjon.', exif:'Nikon D800 · 24 mm · f/11 · 1/320 s · ISO 320 · 2019'},
+  {src:I('07-modell-hamresanden.jpg'), t:'Hamresanden', d:'Modell på stranden.', exif:'Nikon D1X · 240 mm · f/4 · 1/1250 s · ISO 125 · 2004'},
+  {src:I('07-babysensor.jpg'), t:'Babysensor', d:'Produkt i bruk.'},
+ ]},
+ {id:'grunderiet', no:'08', title:"SNF/Gründeriet", head:"Møtestedet for næringslivet i regionen", text:["Jeg er medlem av Sandefjord Næringsforening - SNF. Dette er den viktigste møteplassen for næringslivet i Sandefjord og omegn.", "SNF gjennomfører årlig et betydelig antall arrangementer med stort mangfold av temaer og dyktige foredragsholdere.", "Gründeriet i Sandefjord er møteplassen for gründere, etablerere og nyskapere. De støtter gjennom hele gründerreisen med nettverk, kompetanse og et levende fellesskap.", "Jeg setter stor pris på å kunne være en del av dette kreative nettverket i byen."], items:[
+  {video:I('08-hovedvideo.mp4'), poster:I('08-hovedbilde.jpg'), t:'Gründeriet', d:'Kort film for Sandefjord Næringsforening. Spilles av i rammen.'},
+  {src:I('08-ta-sjansen.jpg'), t:'Ta sjansen', d:'Fra arrangementet på havna.', exif:'Nikon D800 · 10,5 mm · f/9 · 1/2500 s · ISO 800 · 2022'},
+  {src:I('08-to-med-glass.jpg'), t:'Skål', d:'To med glass på arrangementet.', exif:'Nikon D800 · 44 mm · f/4,5 · 1/800 s · ISO 1600 · 2025'},
+  {src:I('08-stjerne-ordforer.jpg'), t:'Stjerne i fortauet', d:'Ordføreren avduker en ny stjerne.', exif:'Nikon D800 · 24 mm · f/5 · 1/6400 s · ISO 1600 · 2025'},
+  {video:I('08-kort.mp4'), poster:I('08-kort-poster.jpg'), t:'Velkommen inn', d:'Fem sekunder fra inngangen til Gründeriet.'},
+ ]},
+];
+works.push({id:'paul', no:'09', title:'Pauls historie', head:'Urkraft i de sveitsiske alper', text:["Jeg kommer opprinnelig fra Sveits og er utdannet fotograf fra Kunst og Håndverksskolen i Zürich.","Ferdig utdannet satte jeg kurs for Norden – men før jeg «gjorde nordmann av meg» arbeidet jeg i fire år som mote- og produktfotograf i Sverige.","Her kan du se noen av bildene mine tatt i Sveits, som oksen som trekker snøplogen på syttitallet, majestetiske Matterhorn og flere.","I dag er jeg fascinert av videofotografering med droner, samtidig som jeg tilbyr mine øvrige tjenester, primært til Sandefjord og Vestfoldregionen, men også til andre deler av landet."], items:[
+  {src:I('09-hovedbilde.jpg'), t:'Vinter i Sveits', d:'Bonde med okse i snøen.'},
+  {src:I('09-barndoms-dal-1.jpg'), t:'Barndomsdalen', d:'Dalen der Paul vokste opp.'},
+  {src:I('09-paul-student.jpg'), t:'Student', d:'Paul som student i Zürich.'},
+  {src:I('09-vinter-sveits.jpg'), t:'Spor i snøen', d:'Vinterlys over tåkehavet.'},
+  {src:I('09-jungfraujoch.jpg'), t:'Matterhorn', d:'Morgenlys på toppen.'},
+]});
+
+/* Slideshow */
+const heroSet=[
+  [I('00-forsidebilde.jpg'),'Forside'],[I('01-hovedbilde.jpg'),'Drone'],[I('03-hovedbilde.jpg'),'Portretter og modeller'],
+  [I('02-hovedbilde.jpg'),'Interiør'],[I('05-vaffel-ute.jpg'),'Mat'],[I('09-jungfraujoch.jpg'),'Sveits'],
+];
+const slides=document.getElementById('slides'), bars=document.getElementById('bars'), now=document.getElementById('now');
+let hs=0, timer;
+heroSet.forEach(([src,lbl],i)=>{
+  const d=document.createElement('div'); d.className='slide'+(i?'':' on'); d.innerHTML=`<img src="${src}" alt="${lbl}" ${i?'loading="lazy"':''}>`; slides.appendChild(d);
+  const b=document.createElement('button'); b.type='button'; b.setAttribute('role','tab'); b.setAttribute('aria-label',lbl); if(!i)b.className='on';
+  b.onclick=()=>{go(i); restart()}; bars.appendChild(b);
+});
+const pad=n=>String(n).padStart(2,'0');
+function go(i){hs=i; [...slides.children].forEach((s,j)=>s.classList.toggle('on',j===i)); [...bars.children].forEach((b,j)=>b.classList.toggle('on',j===i)); now.textContent=`${pad(i+1)} / ${pad(heroSet.length)} · ${heroSet[i][1]}`}
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function restart(){clearInterval(timer); if(!reduce) timer=setInterval(()=>go((hs+1)%heroSet.length),6000)}
+go(0); restart();
+
+/* Header */
+const hdr=document.getElementById('top'), hero=document.getElementById('start');
+const setSolid=()=>hdr.classList.toggle('solid', scrollY > hero.offsetHeight-80 || hdr.classList.contains('open'));
+addEventListener('scroll',setSolid,{passive:true}); setSolid();
+const burger=document.getElementById('burger');
+burger.onclick=()=>{const o=hdr.classList.toggle('open'); burger.setAttribute('aria-expanded',o); setSolid()};
+document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>{hdr.classList.remove('open'); burger.setAttribute('aria-expanded',false); setSolid()}));
+
+/* Variant: black menu bar (svart.html or #svart) */
+if (document.documentElement.dataset.meny==='svart' || location.hash==='#svart') hdr.classList.add('bar');
+/* Highlight the section in view */
+const links=[...document.querySelectorAll('#menu a')];
+const spy=()=>{let cur=null; for(const a of links){const t=document.querySelector(a.getAttribute('href')); if(t && t.getBoundingClientRect().top < innerHeight*0.35) cur=a;} links.forEach(a=>a.classList.toggle('on',a===cur));};
+addEventListener('scroll',spy,{passive:true}); spy();
+/* Index tiles */
+const tiles=document.getElementById('tiles');
+works.forEach(w=>{tiles.insertAdjacentHTML('beforeend',`<li><a href="#${w.id}"><img src="${w.items[0].src||w.items[0].poster}" alt="" loading="lazy"><span class="lbl"><b>${w.title}</b><span>${w.no}</span></span></a></li>`)});
+
+/* Lightbox */
+const lb=document.getElementById('lb'), lbimg=document.getElementById('lbimg'), lbcap=document.getElementById('lbcap');
+let lbBack=null;
+function openLb(it,from){lbimg.src=it.src; lbimg.alt=it.t; lbcap.textContent=it.t+(it.d?' – '+it.d:''); lb.hidden=false; lbBack=from; document.getElementById('lbx').focus()}
+function closeLb(){lb.hidden=true; lbBack&&lbBack.focus()}
+document.getElementById('lbx').onclick=closeLb; lb.onclick=e=>{if(e.target===lb)closeLb()};
+addEventListener('keydown',e=>{if(e.key==='Escape'&&!lb.hidden)closeLb()});
+
+/* Gallery: large frame + the four not shown, equal height */
+function gallery(w){
+  const el=document.createElement('div');
+  el.innerHTML=`<div class="gal"><div class="frame" aria-live="polite"></div><ul class="four"></ul></div>
+    <div class="cap"><div><h3></h3><p></p></div><div class="exif"></div></div>`;
+  const frame=el.querySelector('.frame'), four=el.querySelector('.four'), h=el.querySelector('h3'), p=el.querySelector('.cap p'), ex=el.querySelector('.exif');
+  let cur=0;
+  const n=w.items.length;
+  function paint(){
+    const it=w.items[cur];
+    frame.classList.toggle('fit',!!it.fit);
+    frame.innerHTML=(it.ph
+      ? `<div class="ph"><span class="eyebrow">FILM</span><b>${it.ph}</b></div>`
+      : it.video
+      ? `<video src="${it.video}" poster="${it.poster}" controls muted loop playsinline autoplay></video>`
+      : `<img src="${it.src}" alt="${it.t}"><button class="open" type="button" aria-label="Vis ${it.t} i fullskjerm"></button>`)
+      + `<button class="arrow prev" type="button" aria-label="Forrige bilde">‹</button><button class="arrow next" type="button" aria-label="Neste bilde">›</button>`;
+    const o=frame.querySelector('.open'); if(o) o.onclick=()=>openLb(it,o);
+    frame.querySelector('.prev').onclick=()=>show((cur-1+n)%n);
+    frame.querySelector('.next').onclick=()=>show((cur+1)%n);
+    h.textContent=it.t; p.textContent=it.d||'';
+    ex.innerHTML=`<b>${pad(cur+1)} / ${pad(n)}</b>${it.exif?'<br>'+it.exif:''}`;
+    four.innerHTML='';
+    w.items.forEach((x,j)=>{ if(j===cur) return;
+      const li=document.createElement('li'), b=document.createElement('button'); b.type='button'; b.setAttribute('aria-label','Vis '+x.t);
+      b.innerHTML=x.ph?`<span class="ph"><b>${x.ph}</b></span><span class="tag">FILM</span>`:`<img src="${x.poster||x.src}" alt="" loading="lazy">${x.video?'<span class="tag">FILM</span>':''}`;
+      b.onclick=()=>show(j); li.appendChild(b); four.appendChild(li);
+    });
+  }
+  function show(i){cur=i; frame.classList.add('fade'); setTimeout(()=>{paint(); requestAnimationFrame(()=>frame.classList.remove('fade'))},140)}
+  paint();
+  el.addEventListener('keydown',e=>{if(e.target.closest('video'))return; if(e.key==='ArrowRight')show((cur+1)%n); if(e.key==='ArrowLeft')show((cur-1+n)%n)});
+  return el;
+}
+const root=document.getElementById('works');
+works.forEach(w=>{
+  const s=document.createElement('section'); s.className='wrap work'; s.id=w.id;
+  const rest=w.text.slice(1).map(t=>`<p>${t}</p>`).join('');
+  s.innerHTML=`<div class="work-head"><span class="eyebrow">${w.no} · ${w.title}</span><h2>${w.head||w.title}</h2>
+    <div class="txt"><p>${w.text[0]}</p>${rest?`<div class="rest" hidden>${rest}</div><button class="more" type="button" aria-expanded="false">Les mer</button>`:''}</div></div>`;
+  const mb=s.querySelector('.more'); if(mb) mb.onclick=()=>{const r=s.querySelector('.rest'); r.hidden=!r.hidden; mb.textContent=r.hidden?'Les mer':'Vis mindre'; mb.setAttribute('aria-expanded',!r.hidden)};
+  s.appendChild(gallery(w)); root.appendChild(s);
+});
+
+/* Contact form (demo) */
+document.getElementById('form').addEventListener('submit',e=>{e.preventDefault(); document.getElementById('f-status').textContent='I den ferdige siden sendes meldingen rett til Paul på e-post.'});
+/* Copy buttons */
+document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',()=>{
+  const t=document.getElementById(b.dataset.copy).textContent, old=b.textContent;
+  const done=()=>{b.textContent='Kopiert'; setTimeout(()=>b.textContent=old,1600)};
+  try{navigator.clipboard.writeText(t).then(done,()=>sel(b.dataset.copy))}catch(e){sel(b.dataset.copy)}
+}));
+function sel(id){const r=document.createRange(); r.selectNodeContents(document.getElementById(id)); const s=getSelection(); s.removeAllRanges(); s.addRange(r)}
+</script>
+
+</body>
+</html>
