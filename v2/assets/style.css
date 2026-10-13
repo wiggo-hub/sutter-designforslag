@@ -191,14 +191,22 @@ a{color:inherit}
   .hero.contain-portrait > img{object-fit:contain}
 }
 
-/* v2: page 2 = coloured text panel + four squares */
-.page2{min-height:calc(100svh - var(--barh)); display:flex; align-items:center}
-.page2 > .wrap{width:100%}
-.p2-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.9fr); gap:clamp(20px,3vw,40px); align-items:start}
-.panel.colour{background:var(--accent); color:#fff}
-.panel.colour h2{color:#fff}
-.panel .noai{margin-top:1.4em; padding-top:.9em; border-top:1px solid rgba(255,255,255,.35); font-size:.92rem; font-style:italic}
-.squares{display:grid; grid-template-columns:1fr 1fr; gap:clamp(10px,1.4vw,18px); list-style:none; margin:0; padding:0}
+/* v2: page 2 = coloured panel (full height, to the left edge) + four squares, as in Harry's sketch */
+.page2{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2fr); min-height:calc(100svh - var(--barh))}
+.p2-panel{background:var(--accent); color:#fff; display:flex; align-items:center; justify-content:flex-end}
+.p2-text{width:100%; max-width:440px; padding:48px clamp(24px,3vw,48px) 48px max(var(--gut), calc((100vw - var(--wrap)) / 2 + var(--gut)))}
+.p2-text p{margin:0 0 1em; max-width:42ch}
+.p2-text .noai{margin-top:1.6em; padding-top:.9em; border-top:1px solid rgba(255,255,255,.4); font-size:.92rem; font-style:italic}
+.p2-photos{display:flex; flex-direction:column; align-items:center; justify-content:center; padding:32px var(--gut)}
+.squares-wrap{width:100%; max-width:min(720px, calc(100svh - var(--barh) - 170px))}
+.squares{display:grid; grid-template-columns:1fr 1fr; gap:6px; list-style:none; margin:0; padding:0}
+.squares li{display:flex; flex-direction:column}
+.squares li:nth-child(-n+2) .sqcap{order:-1; margin:0 0 6px}
+.squares li:nth-child(n+3) .sqcap{margin:6px 0 0}
+.squares li:nth-child(even) .sqcap{text-align:right}
+.sqcap{font-size:.88rem; color:var(--ink); line-height:1.3; min-height:2.6em; display:flex; align-items:flex-end}
+.squares li:nth-child(n+3) .sqcap{align-items:flex-start}
+.squares li:nth-child(even) .sqcap{justify-content:flex-end}
 .sq{display:block; position:relative; width:100%; aspect-ratio:1; padding:0; border:0; overflow:hidden; background:var(--panel); cursor:zoom-in}
 .sq img{width:100%; height:100%; object-fit:cover; transition:transform .5s ease}
 button.sq:hover img{transform:scale(1.04)}
@@ -206,8 +214,17 @@ button.sq:hover img{transform:scale(1.04)}
 .sq .play{position:absolute; left:50%; top:50%; translate:-50% -50%; width:64px; height:64px; border-radius:50%; background:rgba(20,20,20,.7); color:#fff; display:grid; place-items:center; font-size:1.4rem; padding-left:4px}
 .sq.ph{display:grid; place-content:center; text-align:center; gap:4px; cursor:default; color:var(--muted)}
 .sq.ph b{color:var(--ink); font-weight:300; font-size:1.4rem; text-transform:uppercase}
-.sqcap{margin:8px 0 0; font-size:.95rem; color:var(--muted)}
-@media (max-width:980px){ .p2-grid{grid-template-columns:1fr} .page2{min-height:0} }
+.clickhint{margin:14px 0 0; font-size:.85rem; color:var(--muted); text-align:center}
+@media (max-width:900px){
+  .page2{grid-template-columns:1fr; min-height:0}
+  .p2-panel{justify-content:flex-start}
+  .p2-text{max-width:none; padding:32px var(--gut)}
+  .squares-wrap{max-width:none}
+  .sqcap{min-height:0; font-size:.8rem}
+  .squares li .sqcap,.squares li:nth-child(-n+2) .sqcap,.squares li:nth-child(n+3) .sqcap{order:0; margin:6px 0 0; text-align:left; justify-content:flex-start; align-items:flex-start}
+  .squares{row-gap:14px}
+}
+.pager{margin-top:0}
 
 /* v2: lightbox = picture in max size, no text */
 .lb{padding:0}
@@ -219,5 +236,3 @@ button.sq:hover img{transform:scale(1.04)}
 .lb button:focus-visible{outline:3px solid #fff; outline-offset:2px}
 @media (max-width:600px){ .lb-media{padding:56px 8px 16px} .lb-prev,.lb-next{top:auto; bottom:12px; translate:none} }
 
-/* the four squares fit on one screen next to the text */
-@media (min-width:981px){ .squares-wrap{max-width:calc(100svh - var(--barh) - 220px); width:100%} }
