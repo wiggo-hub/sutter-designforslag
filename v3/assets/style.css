@@ -366,3 +366,5 @@ button.sq:hover::after,button.sq:focus-visible::after{opacity:1}
 .refs a{display:flex; align-items:center; text-decoration:none; color:inherit}
 .refs a:hover .logo-ph,.refs a:focus-visible .logo-ph{color:var(--ink)}
 .refs a:focus-visible{outline:3px solid var(--focus); outline-offset:4px}
+@media (min-width:901px){ .squares li:nth-child(-n+2) .sqcap{min-height:2.7em} }
+button.sq:has(.play)::after{display:none}
