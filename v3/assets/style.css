@@ -377,3 +377,14 @@ button.sq:has(.play)::after{display:none}
 .band + .refs{border-top:1px solid var(--line)}
 .page2 .p2-photos{padding-block:clamp(48px,6vw,80px)}
 .band{background:#fff; border-top:1px solid var(--line)}
+
+/* v3.4: spacing on an 8-point scale (section 64/40, block 48/32, component 32/24) */
+:root{--s-section:64px; --s-block:48px; --s-comp:32px}
+@media (max-width:991px){ :root{--s-section:40px; --s-block:32px; --s-comp:24px} }
+.content{padding-block:var(--s-section)}
+.page2 .p2-photos{padding-block:var(--s-block)}
+.pager{margin-top:var(--s-block); margin-bottom:var(--s-section); padding-top:var(--s-comp)}
+.refs{padding-block:var(--s-section)}
+.refs h2{margin-bottom:var(--s-comp)}
+.foot{padding-block:var(--s-block) var(--s-comp)}
+.contact{padding-block:var(--s-section)}
