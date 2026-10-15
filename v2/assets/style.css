@@ -45,7 +45,7 @@ a{color:inherit}
 .nav a[aria-current="page"]{color:var(--bar-hi); text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:6px}
 .bar :focus-visible{outline-color:var(--bar-hi)}
 .menu-btn{display:none; background:none; border:1px solid rgba(255,255,255,.4); color:var(--bar-ink); font:inherit; font-size:.95rem; padding:8px 14px; cursor:pointer}
-@media (max-width:1300px){
+@media (max-width:1260px){
   .menu-btn{display:block}
   .nav{display:none; position:absolute; left:0; right:0; top:100%; background:var(--bar); padding:4px var(--gut) 18px; border-top:1px solid rgba(255,255,255,.12); max-height:calc(100svh - var(--barh)); overflow:auto}
   .bar.open .nav{display:block}
@@ -249,3 +249,34 @@ button.sq:hover img{transform:scale(1.04)}
 .sq.soon img{filter:saturate(.9)}
 .sq .tag{position:absolute; left:8px; bottom:8px; background:rgba(20,20,20,.78); color:#fff; font-size:.75rem; font-weight:700; padding:3px 8px}
 @media (max-width:980px){ .contact .paul{max-width:260px; justify-self:start} }
+
+/* v2.1: menu as in the sketch – equal columns, white line between items, two-line labels */
+:root{--barh:64px}
+.bar .wrap{max-width:none; align-items:stretch; min-height:var(--barh); padding-block:0}
+.home{align-self:center}
+.nav{flex:1; max-width:1140px; margin-left:auto; display:flex}
+.nav ul{flex:1; display:grid; grid-auto-flow:column; grid-auto-columns:minmax(0,1fr); gap:0; flex-wrap:nowrap}
+.nav li{border-left:1px solid rgba(255,255,255,.85); margin-block:12px 6px; display:flex}
+.nav a{flex:1; padding:2px 8px 6px; font-size:.875rem; font-weight:700; line-height:1.25; white-space:normal; color:var(--bar-ink); text-decoration:none; border-bottom:3px solid transparent}
+.nav a span{display:block}
+.nav a:hover{text-decoration:underline; text-underline-offset:4px}
+.nav a[aria-current="page"]{color:#c3b9ff; text-decoration:none; border-bottom-color:#c3b9ff}
+.nav a:focus-visible{outline:3px solid #c3b9ff; outline-offset:-3px}
+@media (max-width:1260px){
+  .bar .wrap{align-items:center; min-height:var(--barh)}
+  .nav{display:none; max-width:none; margin:0}
+  .bar.open .nav{display:block}
+  .nav ul{display:flex; flex-direction:column}
+  .nav li{border-left:0; margin:0; display:block}
+  .nav a{padding:12px 0; font-size:1.05rem; border-bottom:1px solid rgba(255,255,255,.12)}
+  .nav a span{display:inline}
+  .nav a[aria-current="page"]{border-bottom:1px solid #c3b9ff}
+}
+@media (min-width:1261px){ .menu-btn{display:none} }
+
+/* v2.1: wider text field – text runs from the left edge, "KI" line at the bottom */
+.p2-panel{display:flex; flex-direction:column; justify-content:center; align-items:stretch; padding:56px clamp(24px,4.3vw,72px) 40px}
+.p2-text{width:100%; max-width:none; padding:0; margin-block:auto}
+.p2-text p{max-width:58ch}
+.p2-panel .noai{margin:32px 0 0; padding:0; border:0; font-style:normal; font-size:1rem}
+@media (max-width:900px){ .p2-panel{padding:32px var(--gut)} }
