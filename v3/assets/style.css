@@ -295,3 +295,43 @@ button.sq:hover img{transform:scale(1.04)}
 button.sq::after{content:"⤢"; position:absolute; right:8px; top:8px; width:34px; height:34px; display:grid; place-items:center; background:rgba(20,20,20,.6); color:#fff; font-size:1.1rem; opacity:0; transition:opacity .2s}
 button.sq:hover::after,button.sq:focus-visible::after{opacity:1}
 @media (hover:none){ button.sq::after{opacity:.85} }
+
+/* v3.1 menu: no vertical lines, calmer spacing, Kontakt as a button */
+@media (min-width:1261px){
+  .nav{max-width:1180px}
+  .nav ul{display:flex; justify-content:flex-end; align-items:center; gap:clamp(14px,1.6vw,28px)}
+  .nav li{border-left:0; margin:0; display:block}
+  .nav a{padding:10px 0 8px; font-weight:400; font-size:.9rem; letter-spacing:.01em; border-bottom:2px solid transparent}
+  .nav a[aria-current="page"]{color:#fff; border-bottom-color:#c3b9ff}
+  .nav a:hover{text-decoration:none; border-bottom-color:rgba(255,255,255,.5)}
+  .nav li.cta a{border:1px solid rgba(255,255,255,.75); border-radius:999px; padding:9px 18px; margin-left:6px}
+  .nav li.cta a:hover{background:#fff; color:var(--bar)}
+  .nav li.cta a[aria-current="page"]{background:#fff; color:var(--bar); border-color:#fff}
+}
+
+/* v3.1: clients */
+.clients{padding-block:clamp(36px,5vw,56px) 0}
+.clients h2{margin:0 0 14px; font-size:.85rem; font-weight:700; text-transform:uppercase; letter-spacing:.14em; color:var(--muted)}
+.clients ul{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:8px 28px; font-size:1.15rem; font-weight:300}
+
+/* v3.1: contact band on every page */
+.band{background:#f3f3f1; padding-block:clamp(36px,5vw,64px)}
+.band h2{margin:0 0 6px; font-weight:300; text-transform:uppercase; font-size:clamp(1.5rem,2.8vw,2.2rem)}
+.band p{margin:0; font-size:1.15rem}
+.band a{font-weight:700; text-underline-offset:4px}
+
+/* v3.1: next category as a picture card */
+.pager{align-items:stretch}
+.pager a.card{display:grid; grid-template-columns:120px auto; grid-template-rows:auto auto; column-gap:16px; align-items:end; text-align:left}
+.pager a.card img{grid-row:1 / 3; width:120px; height:80px; object-fit:cover}
+.pager a.card span{align-self:end}
+.pager a.card b{align-self:start}
+
+/* v3.1: call bar on phones */
+.callbar{display:none}
+@media (max-width:700px){
+  .callbar{display:grid; grid-template-columns:1fr 1fr; position:sticky; bottom:0; z-index:35; padding-bottom:env(safe-area-inset-bottom,0px); background:var(--bar)}
+  .callbar a{color:#fff; text-decoration:none; text-align:center; font-weight:700; padding:14px 8px}
+  .callbar a + a{border-left:1px solid rgba(255,255,255,.25)}
+  .callbar a:focus-visible{outline:3px solid #c3b9ff; outline-offset:-3px}
+}
