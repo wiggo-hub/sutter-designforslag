@@ -43,6 +43,10 @@
     });
   }
 
+  /* References strip: pause button (WCAG 2.2.2) */
+  var refs=document.querySelector('.refs'), rt=document.querySelector('.refs-toggle');
+  if(refs && rt){ rt.addEventListener('click',function(){ var p=refs.classList.toggle('paused'); rt.setAttribute('aria-pressed',p); rt.textContent=p?'Start rulling':'Stopp rulling'; }); }
+
   /* Contact form (demo – nothing is sent) */
   var form=document.getElementById('kontaktskjema');
   if(form){
