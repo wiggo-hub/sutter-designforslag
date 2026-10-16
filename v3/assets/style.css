@@ -390,3 +390,13 @@ button.sq:has(.play)::after{display:none}
 .refs-grid a:hover img,.refs-grid a:focus-visible img,.refs-grid .cell:hover img{filter:none; opacity:1}
 @media (hover:none){ .refs-grid img{filter:none; opacity:1} }
 @media (max-width:900px){ .refs-grid a,.refs-grid .cell{height:104px; padding:16px} .refs-grid img{max-height:48px} .refs-grid img.tall{max-height:68px} }
+
+/* v3.6: logos in colour, not links */
+.refs-grid img,.refs-grid img.tall{filter:none; opacity:1}
+/* v3.6: phone held sideways – the large picture uses the full height */
+@media (orientation:landscape) and (max-height:600px){
+  .lb-media{padding:0 64px}
+  .lb-media img,.lb-media video{max-height:100svh}
+  .lb .close{top:8px; right:8px; background:rgba(0,0,0,.55); z-index:2}
+  .lb-prev,.lb-next{top:50%; bottom:auto; translate:0 -50%}
+}
