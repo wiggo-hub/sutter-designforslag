@@ -45,7 +45,7 @@ a{color:inherit}
 .nav a[aria-current="page"]{color:var(--bar-hi); text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:6px}
 .bar :focus-visible{outline-color:var(--bar-hi)}
 .menu-btn{display:none; background:none; border:1px solid rgba(255,255,255,.4); color:var(--bar-ink); font:inherit; font-size:.95rem; padding:8px 14px; cursor:pointer}
-@media (max-width:1320px){
+@media (max-width:1260px){
   .menu-btn{display:block}
   .nav{display:none; position:absolute; left:0; right:0; top:100%; background:var(--bar); padding:4px var(--gut) 18px; border-top:1px solid rgba(255,255,255,.12); max-height:calc(100svh - var(--barh)); overflow:auto}
   .bar.open .nav{display:block}
@@ -262,7 +262,7 @@ button.sq:hover img{transform:scale(1.04)}
 .nav a:hover{text-decoration:underline; text-underline-offset:4px}
 .nav a[aria-current="page"]{color:#c3b9ff; text-decoration:none; border-bottom-color:#c3b9ff}
 .nav a:focus-visible{outline:3px solid #c3b9ff; outline-offset:-3px}
-@media (max-width:1320px){
+@media (max-width:1260px){
   .bar .wrap{align-items:center; min-height:var(--barh)}
   .nav{display:none; max-width:none; margin:0}
   .bar.open .nav{display:block}
@@ -272,7 +272,7 @@ button.sq:hover img{transform:scale(1.04)}
   .nav a span{display:inline}
   .nav a[aria-current="page"]{border-bottom:1px solid #c3b9ff}
 }
-@media (min-width:1321px){ .menu-btn{display:none} }
+@media (min-width:1261px){ .menu-btn{display:none} }
 
 /* v2.1: wider text field – text runs from the left edge, "KI" line at the bottom */
 .p2-panel{display:flex; flex-direction:column; justify-content:center; align-items:stretch; padding:56px clamp(24px,4.3vw,72px) 40px}
@@ -295,19 +295,6 @@ button.sq:hover img{transform:scale(1.04)}
 button.sq::after{content:"⤢"; position:absolute; right:8px; top:8px; width:34px; height:34px; display:grid; place-items:center; background:rgba(20,20,20,.6); color:#fff; font-size:1.1rem; opacity:0; transition:opacity .2s}
 button.sq:hover::after,button.sq:focus-visible::after{opacity:1}
 @media (hover:none){ button.sq::after{opacity:.85} }
-
-/* v3.1 menu: no vertical lines, calmer spacing, Kontakt as a button */
-@media (min-width:1321px){
-  .nav{max-width:1240px}
-  .nav ul{display:flex; justify-content:flex-end; align-items:center; gap:clamp(14px,1.6vw,28px)}
-  .nav li{border-left:0; margin:0; display:block}
-  .nav a{padding:10px 0 8px; font-weight:400; font-size:.9rem; letter-spacing:.01em; border-bottom:2px solid transparent}
-  .nav a[aria-current="page"]{color:#fff; border-bottom-color:#c3b9ff}
-  .nav a:hover{text-decoration:none; border-bottom-color:rgba(255,255,255,.5)}
-  .nav li.cta a{border:1px solid rgba(255,255,255,.75); border-radius:999px; padding:9px 18px; margin-left:6px}
-  .nav li.cta a:hover{background:#fff; color:var(--bar)}
-  .nav li.cta a[aria-current="page"]{background:#fff; color:var(--bar); border-color:#fff}
-}
 
 /* v3.1: clients */
 .clients{padding-block:clamp(36px,5vw,56px) 0}
@@ -335,10 +322,6 @@ button.sq:hover::after,button.sq:focus-visible::after{opacity:1}
   .callbar a + a{border-left:1px solid rgba(255,255,255,.25)}
   .callbar a:focus-visible{outline:3px solid #c3b9ff; outline-offset:-3px}
 }
-
-/* v3.2: more air between menu items */
-@media (min-width:1321px){ .nav ul{gap:clamp(24px,2.4vw,44px)} .nav li.cta a{margin-left:10px} }
-@media (min-width:1261px) and (max-width:1320px){ .nav ul{gap:20px} }
 
 /* v3.3: references as a card with equal cells (inspired by microsoft.com) */
 .refs{background:#f3f3f1; padding-block:clamp(64px,8vw,112px)}
@@ -388,3 +371,22 @@ button.sq:has(.play)::after{display:none}
 .refs h2{margin-bottom:var(--s-comp)}
 .foot{padding-block:var(--s-block) var(--s-comp)}
 .contact{padding-block:var(--s-section)}
+
+/* v3.5: black field above the main photo on Pauls historie, so the head is not cut */
+.hero.top-band{background:#000; --band:clamp(72px,10vh,96px)}
+.hero.top-band > img{top:var(--band); height:calc(100% - var(--band)); object-fit:cover; object-position:center top}
+.hero.top-band::before{display:none}
+.hero.top-band .inner{padding-block:calc((var(--band) - 46px) / 2)}
+@media (orientation:portrait) and (max-width:900px){
+  .hero.top-band{height:auto; min-height:0}
+  .hero.top-band > img{position:relative; top:auto; display:block; height:auto; margin-top:var(--band)}
+  .hero.top-band .inner{position:absolute; inset:0 0 auto 0; height:var(--band)}
+}
+
+/* v3.5: client logos – grey until hover or focus */
+.refs-grid a,.refs-grid .cell{height:128px; padding:20px 24px}
+.refs-grid img{max-height:64px; max-width:78%; width:auto; height:auto; object-fit:contain; filter:grayscale(1); opacity:.55; transition:filter .3s, opacity .3s}
+.refs-grid img.tall{max-height:88px}
+.refs-grid a:hover img,.refs-grid a:focus-visible img,.refs-grid .cell:hover img{filter:none; opacity:1}
+@media (hover:none){ .refs-grid img{filter:none; opacity:1} }
+@media (max-width:900px){ .refs-grid a,.refs-grid .cell{height:104px; padding:16px} .refs-grid img{max-height:48px} .refs-grid img.tall{max-height:68px} }
