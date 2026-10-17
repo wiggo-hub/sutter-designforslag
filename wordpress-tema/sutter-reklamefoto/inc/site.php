@@ -147,3 +147,33 @@ add_action( 'admin_init', function () {
 		file_put_contents( $ht, "# Originaler uten vannmerke\n<IfModule mod_authz_core.c>\nRequire all denied\n</IfModule>\n<IfModule !mod_authz_core.c>\nOrder allow,deny\nDeny from all\n</IfModule>\n" ); // phpcs:ignore
 	}
 } );
+
+/* Comments are not used on this site: switch them off everywhere, so there is nothing for spam robots to fill in */
+add_action( 'init', function () {
+	foreach ( get_post_types() as $type ) {
+		if ( post_type_supports( $type, 'comments' ) ) {
+			remove_post_type_support( $type, 'comments' );
+			remove_post_type_support( $type, 'trackbacks' );
+		}
+	}
+}, 100 );
+add_filter( 'comments_array', '__return_empty_array', 10, 2 );
+add_filter( 'feed_links_show_comments_feed', '__return_false' );
+add_filter( 'rest_endpoints', function ( $endpoints ) {
+	unset( $endpoints['/wp/v2/comments'], $endpoints['/wp/v2/comments/(?P<id>[\d]+)'] );
+	return $endpoints;
+} );
+add_action( 'pre_comment_on_post', function () {
+	wp_die( 'Kommentarer er slått av på denne nettsiden.', '', array( 'response' => 403 ) );
+} );
+add_action( 'admin_menu', function () {
+	remove_menu_page( 'edit-comments.php' );
+	remove_submenu_page( 'options-general.php', 'options-discussion.php' );
+} );
+add_action( 'admin_bar_menu', function ( $bar ) {
+	$bar->remove_node( 'comments' );
+}, 999 );
+add_filter( 'wp_headers', function ( $headers ) {
+	unset( $headers['X-Pingback'] );
+	return $headers;
+} );

@@ -424,3 +424,6 @@ button.sq:has(.play)::after{display:none}
 .p2-panel .noai p{margin:0}
 .p2-panel .noai p + p{margin-top:4px; padding-top:6px; border-top:1px solid rgba(255,255,255,.25)}
 .p2-panel .noai .c{font-size:1.15em; line-height:1; vertical-align:-.05em; margin-right:2px}
+
+/* v1.4: required fields */
+.form .star{color:#b3261e; font-weight:700}

@@ -5,6 +5,7 @@
  *
  * @author Jan Wiggo Wiger
  */
+nocache_headers();
 get_header();
 the_post();
 $s_status = '';
@@ -24,18 +25,18 @@ if ( isset( $_GET['sendt'] ) ) { // phpcs:ignore WordPress.Security.NonceVerific
       <div class="left">
       <form class="form" id="kontaktskjema" method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" novalidate>
         <?php the_content(); ?>
-        <p class="req" style="margin:0">Alle felt må fylles ut.</p>
+        <p class="req" style="margin:0">Felt merket med <span class="star" aria-hidden="true">*</span> må fylles ut.</p>
         <input type="hidden" name="action" value="sutter_kontakt">
         <input type="hidden" name="tilbake" value="<?php echo esc_url( get_permalink() ); ?>">
-        <?php wp_nonce_field( 'sutter_kontakt', 'sutter_nonce' ); ?>
+        <input type="hidden" name="sutter_t" value="<?php echo esc_attr( sutter_form_token() ); ?>">
         <div style="position:absolute;left:-9999px" aria-hidden="true"><label for="nettside">La dette feltet stå tomt</label><input id="nettside" name="nettside" tabindex="-1" autocomplete="off"></div>
-        <label for="navn">Navn</label>
+        <label for="navn">Navn <span class="star" aria-hidden="true">*</span></label>
         <input id="navn" name="navn" autocomplete="name" required aria-describedby="navn-feil">
         <p class="err" id="navn-feil" hidden>Skriv inn navnet ditt.</p>
-        <label for="epost">E-post</label>
+        <label for="epost">E-post <span class="star" aria-hidden="true">*</span></label>
         <input id="epost" name="epost" type="email" autocomplete="email" required aria-describedby="epost-feil">
         <p class="err" id="epost-feil" hidden>Skriv inn en gyldig e-postadresse, for eksempel navn@firma.no.</p>
-        <label for="melding">Melding</label>
+        <label for="melding">Melding <span class="star" aria-hidden="true">*</span></label>
         <textarea id="melding" name="melding" rows="6" required aria-describedby="melding-feil"></textarea>
         <p class="err" id="melding-feil" hidden>Skriv en melding.</p>
         <button type="submit">Send melding</button>
