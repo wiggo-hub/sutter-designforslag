@@ -427,3 +427,10 @@ button.sq:has(.play)::after{display:none}
 
 /* v1.4: required fields */
 .form .star{color:#b3261e; font-weight:700}
+
+/* v1.5: small © on the large top photos (the watermark in the file is often cropped away there) */
+.hero-c{position:absolute; right:clamp(12px,2vw,28px); bottom:clamp(10px,1.6vw,22px); z-index:2; pointer-events:none; color:rgba(255,255,255,.62); font-size:.8rem; letter-spacing:.03em; text-shadow:0 1px 3px rgba(0,0,0,.45)}
+@media (max-width:700px){ .hero-c{bottom:62px} }
+@media (orientation:portrait) and (max-width:900px){ .hero.top-band .hero-c, .hero.contain-portrait .hero-c{display:none} }
+/* v1.5: on phones the call bar covers the bottom of the first screen – keep the logo and slogan above it */
+@media (max-width:700px){ .hero:not(.cat) .inner{padding-bottom:calc(clamp(24px,5vh,56px) + 48px)} }

@@ -31,6 +31,7 @@ $s_next  = ( false !== $s_pos && $s_pos < count( $s_pages ) - 1 ) ? $s_pages[ $s
 <main id="innhold" tabindex="-1">
 <section class="hero cat <?php echo esc_attr( implode( ' ', $s_cls ) ); ?>" style="--accent:<?php echo esc_attr( $s_accent ); ?>">
   <?php echo sutter_hero_img( $s_pid ); // phpcs:ignore ?>
+  <span class="hero-c" aria-hidden="true">© Paul Sutter</span>
   <div class="inner wrap">
     <div><h1 id="sidetittel" class="sr-only"><?php echo esc_html( $s_title ); ?></h1><a class="btn" href="#bilder">Se mer <span aria-hidden="true">↓</span></a></div>
   </div>

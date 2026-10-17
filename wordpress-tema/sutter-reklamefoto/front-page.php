@@ -11,6 +11,7 @@ $s_h1  = $s_pid ? sutter_plain_title( get_the_title( $s_pid ) ) : get_bloginfo( 
 <main id="innhold" tabindex="-1">
 <section class="hero" style="--accent:#1d5a80" aria-labelledby="sidetittel">
   <?php echo $s_pid ? sutter_hero_img( $s_pid ) : ''; // phpcs:ignore ?>
+  <span class="hero-c" aria-hidden="true">© Paul Sutter</span>
   <div class="inner wrap">
     <div><h1 id="sidetittel"><?php echo esc_html( $s_h1 ); ?></h1><a class="btn" href="#arbeider"><?php echo esc_html( sutter_opt( 'front_btn' ) ); ?> <span aria-hidden="true">↓</span></a></div>
     <div class="hero-foot"><?php echo sutter_lockup(); // phpcs:ignore ?></div>
