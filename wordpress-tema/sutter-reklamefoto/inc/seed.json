@@ -1,0 +1,769 @@
+{
+ "files": [
+  {
+   "key": "01-hovedbilde.jpg",
+   "path": "img/01-hovedbilde.jpg",
+   "alt": "Fargerike kajakker på sjøen, fotografert rett ovenfra med drone",
+   "caption": "",
+   "title": "Droneopptak ute og inne – hovedbilde",
+   "name": "dronefoto-fargerike-kajakker-sandefjord.jpg"
+  },
+  {
+   "key": "fpv-poster.jpg",
+   "path": "img/fpv-poster.jpg",
+   "alt": "",
+   "caption": "",
+   "title": "FPV-pilot Sutter tar deg med på en liten tur innom Gründeriet – stillbilde",
+   "name": "fpv-dronefilm-grunderiet-sandefjord.jpg"
+  },
+  {
+   "key": "fpv.mp4",
+   "path": "img/fpv.mp4",
+   "alt": "",
+   "caption": "FPV-pilot Sutter tar deg med på en liten tur innom Gründeriet",
+   "title": "FPV-pilot Sutter tar deg med på en liten tur innom Gründeriet",
+   "poster": "fpv-poster.jpg",
+   "name": "fpv-dronefilm-grunderiet-sandefjord.mp4"
+  },
+  {
+   "key": "01-kajakk-poster.jpg",
+   "path": "img/01-kajakk-poster.jpg",
+   "alt": "",
+   "caption": "",
+   "title": "Bli med en glad gjeng på tur med sine fargerike kanoer – stillbilde",
+   "name": "dronefilm-kajakktur-vestfold.jpg"
+  },
+  {
+   "key": "01-kajakk.mp4",
+   "path": "img/01-kajakk.mp4",
+   "alt": "",
+   "caption": "Bli med en glad gjeng på tur med sine fargerike kanoer",
+   "title": "Bli med en glad gjeng på tur med sine fargerike kanoer",
+   "poster": "01-kajakk-poster.jpg",
+   "name": "dronefilm-kajakktur-vestfold.mp4"
+  },
+  {
+   "key": "01-bryde-poster.jpg",
+   "path": "img/01-bryde-poster.jpg",
+   "alt": "",
+   "caption": "",
+   "title": "En annerledes presentasjon av et begravelsesbyrå – stillbilde",
+   "name": "dronefilm-bryde-begravelsesbyra.jpg"
+  },
+  {
+   "key": "01-bryde.mp4",
+   "path": "img/01-bryde.mp4",
+   "alt": "",
+   "caption": "En annerledes presentasjon av et begravelsesbyrå",
+   "title": "En annerledes presentasjon av et begravelsesbyrå",
+   "poster": "01-bryde-poster.jpg",
+   "name": "dronefilm-bryde-begravelsesbyra.mp4"
+  },
+  {
+   "key": "01-envieco-poster.jpg",
+   "path": "img/01-envieco-poster.jpg",
+   "alt": "",
+   "caption": "",
+   "title": "Envieco presenterer seg via en liten dronesnutt – stillbilde",
+   "name": "dronefilm-envieco.jpg"
+  },
+  {
+   "key": "01-envieco.mp4",
+   "path": "img/01-envieco.mp4",
+   "alt": "",
+   "caption": "Envieco presenterer seg via en liten dronesnutt",
+   "title": "Envieco presenterer seg via en liten dronesnutt",
+   "poster": "01-envieco-poster.jpg",
+   "name": "dronefilm-envieco.mp4"
+  },
+  {
+   "key": "02-hovedbilde.jpg",
+   "path": "img/02-hovedbilde.jpg",
+   "alt": "Lys stue med peis og store vinduer mot sjøen",
+   "caption": "",
+   "title": "Interiør- og eksteriørfoto – hovedbilde",
+   "name": "interiorfoto-stue-med-peis-og-sjoutsikt.jpg"
+  },
+  {
+   "key": "02-trapp.jpg",
+   "path": "img/02-trapp.jpg",
+   "alt": "Svingete trappeoppgang med glassmalerier og hengende lampe på Majorstua i Oslo",
+   "caption": "Sjarmerende trappeoppgang på Majorstua i Oslo",
+   "title": "Sjarmerende trappeoppgang på Majorstua i Oslo",
+   "name": "interiorfoto-trappeoppgang-majorstua-oslo.jpg"
+  },
+  {
+   "key": "02-svingete-vei.jpg",
+   "path": "img/02-svingete-vei.jpg",
+   "alt": "Svingete vei gjennom grønne jorder med løvetann i forgrunnen ved Drøbak",
+   "caption": "Veien slynger seg i vakkert terreng ved Drøbak",
+   "title": "Veien slynger seg i vakkert terreng ved Drøbak",
+   "name": "landskapsfoto-svingete-vei-drobak.jpg"
+  },
+  {
+   "key": "02-ryen-studio.jpg",
+   "path": "img/02-ryen-studio.jpg",
+   "alt": "Showroom med sofaer, TV-skjermer og blått lys på Ryen i Oslo",
+   "caption": "Mitt tidligere showroom på Ryen i Oslo",
+   "title": "Mitt tidligere showroom på Ryen i Oslo",
+   "name": "interiorfoto-showroom-ryen-oslo.jpg"
+  },
+  {
+   "key": "02-kilen-brygge.jpg",
+   "path": "img/02-kilen-brygge.jpg",
+   "alt": "Moderne leilighetsbygg med båt ved bryggen på Kilen Brygge i Sandefjord",
+   "caption": "Kilen Brygge i Sandefjord",
+   "title": "Kilen Brygge i Sandefjord",
+   "name": "eksteriorfoto-kilen-brygge-sandefjord.jpg"
+  },
+  {
+   "key": "03-hovedbilde.jpg",
+   "path": "img/03-hovedbilde.jpg",
+   "alt": "Et par løper hånd i hånd ut i sjøen så vannet spruter",
+   "caption": "",
+   "title": "Modeller og portretter – hovedbilde",
+   "name": "modellfoto-par-loper-i-sjoen.jpg"
+  },
+  {
+   "key": "03-anita-hvalmonument.jpg",
+   "path": "img/03-anita-hvalmonument.jpg",
+   "alt": "Portrett av Anita som lener seg mot et tre foran Hvalfangstmonumentet i Sandefjord",
+   "caption": "Anita foran Hvalfangstmonumentet i Sandefjord",
+   "title": "Anita foran Hvalfangstmonumentet i Sandefjord",
+   "name": "portrett-anita-hvalfangstmonumentet-sandefjord.jpg"
+  },
+  {
+   "key": "03-christer.jpg",
+   "path": "img/03-christer.jpg",
+   "alt": "Portrett av en smilende mann i dress, Christer",
+   "caption": "Christer - en glad gutt",
+   "title": "Christer - en glad gutt",
+   "name": "portrett-christer.jpg"
+  },
+  {
+   "key": "03-ordfrer.jpg",
+   "path": "img/03-ordfrer.jpg",
+   "alt": "Portrett av Sandefjords ordfører Bjørn Ole Gleditsch med ordførerkjede",
+   "caption": "Sandefjords ordfører Bjørn Ole Gleditsch",
+   "title": "Sandefjords ordfører Bjørn Ole Gleditsch",
+   "name": "portrett-ordforer-bjorn-ole-gleditsch-sandefjord.jpg"
+  },
+  {
+   "key": "07-modell-hamresanden.jpg",
+   "path": "img/07-modell-hamresanden.jpg",
+   "alt": "Kvinne med picnickurv går på en strandsti, fotografert for Nordea",
+   "caption": "Klar for picnic ved stranden - for Nordea",
+   "title": "Klar for picnic ved stranden - for Nordea",
+   "name": "modellfoto-picnic-strand-nordea.jpg"
+  },
+  {
+   "key": "04-hovedbilde.jpg",
+   "path": "img/04-hovedbilde.jpg",
+   "alt": "Lommeur i blått lys med bevegelse",
+   "caption": "",
+   "title": "Produkter – hovedbilde",
+   "name": "produktfoto-lommeur-blatt-lys.jpg"
+  },
+  {
+   "key": "04-casa-peis.jpg",
+   "path": "img/04-casa-peis.jpg",
+   "alt": "Peisovnen Casa med flammer bak glasset, forside til Nordpeis-brosjyre",
+   "caption": "Forside av Norpeis-brosjyre for modellen Casa",
+   "title": "Forside av Norpeis-brosjyre for modellen Casa",
+   "name": "produktfoto-nordpeis-casa-peisovn.jpg"
+  },
+  {
+   "key": "04-dressing.jpg",
+   "path": "img/04-dressing.jpg",
+   "alt": "Flaske med superdressing fra Kanda med burger, tomater og basilikum",
+   "caption": "Dressing for Kanda",
+   "title": "Dressing for Kanda",
+   "name": "produktfoto-dressing-kanda.jpg"
+  },
+  {
+   "key": "04-tip-spesial.jpg",
+   "path": "img/04-tip-spesial.jpg",
+   "alt": "Fargede ruller med merketape for rørsystemer fra Norsk VVS",
+   "caption": "Vestfold-bedriften Norsk VVS leverer merking av kompliserte rørsystemer",
+   "title": "Vestfold-bedriften Norsk VVS leverer merking av kompliserte rørsystemer",
+   "name": "produktfoto-norsk-vvs-merking-ror.jpg"
+  },
+  {
+   "key": "04-wilfa-mixer.jpg",
+   "path": "img/04-wilfa-mixer.jpg",
+   "alt": "Wilfa mikser i stål og glass på hvit bakgrunn",
+   "caption": "Wilfa mixer",
+   "title": "Wilfa mixer",
+   "name": "produktfoto-wilfa-mikser.jpg"
+  },
+  {
+   "key": "05-hovedbilde.jpg",
+   "path": "img/05-hovedbilde.jpg",
+   "alt": "Egg på rad i en hvit skål med myke skygger",
+   "caption": "",
+   "title": "Mat – hovedbilde",
+   "name": "matfoto-egg-i-hvit-skal.jpg"
+  },
+  {
+   "key": "05-napoleonskake.jpg",
+   "path": "img/05-napoleonskake.jpg",
+   "alt": "Napoleonskake på en tallerken med en kopp kaffe",
+   "caption": "Napoleonskaken poserer!",
+   "title": "Napoleonskaken poserer!",
+   "name": "matfoto-napoleonskake-og-kaffe.jpg"
+  },
+  {
+   "key": "05-vaffel-ute.jpg",
+   "path": "img/05-vaffel-ute.jpg",
+   "alt": "Vafler med jordbær, blåbær og banan på et gammelt trebord ute",
+   "caption": "Vaffelservering ute.....",
+   "title": "Vaffelservering ute.....",
+   "name": "matfoto-vafler-med-baer-ute.jpg"
+  },
+  {
+   "key": "05-vaffel-inne.jpg",
+   "path": "img/05-vaffel-inne.jpg",
+   "alt": "Vafler med brunost og skinke på et skjærebrett inne",
+   "caption": "...eller inne - like smakfullt!",
+   "title": "...eller inne - like smakfullt!",
+   "name": "matfoto-vafler-med-brunost-inne.jpg"
+  },
+  {
+   "key": "05-fisk.jpg",
+   "path": "img/05-fisk.jpg",
+   "alt": "Makrell som svømmer i blått vann, fotografert for Stabburet",
+   "caption": "For Stabburet fotograferte jeg makrell - uten tomat!",
+   "title": "For Stabburet fotograferte jeg makrell - uten tomat!",
+   "name": "matfoto-makrell-stabburet.jpg"
+  },
+  {
+   "key": "07-hovedbilde.jpg",
+   "path": "img/07-hovedbilde.jpg",
+   "alt": "Ku og to kalver på beite i grønt sommerlandskap",
+   "caption": "",
+   "title": "Diverse – hovedbilde",
+   "name": "naturfoto-ku-og-kalver-pa-beite.jpg"
+  },
+  {
+   "key": "07-twin-towers.jpg",
+   "path": "img/07-twin-towers.jpg",
+   "alt": "Utsikt over Twin Towers i New York fra et helikopter, med piloten i forgrunnen",
+   "caption": "Helikopterutsikt over Twin Towers i New York",
+   "title": "Helikopterutsikt over Twin Towers i New York",
+   "name": "flyfoto-twin-towers-new-york-fra-helikopter.jpg"
+  },
+  {
+   "key": "07-vy-grefsen.jpg",
+   "path": "img/07-vy-grefsen.jpg",
+   "alt": "Vy-tog ved den gamle stasjonsbygningen på Grefsen i Oslo",
+   "caption": "Nytt og gammelt på Grefsen Stasjon i Oslo",
+   "title": "Nytt og gammelt på Grefsen Stasjon i Oslo",
+   "name": "foto-vy-tog-grefsen-stasjon-oslo.jpg"
+  },
+  {
+   "key": "07-cleo.jpg",
+   "path": "img/07-cleo.jpg",
+   "alt": "Liten svart og brun hund, Cleo, ser inn i kameraet",
+   "caption": "Fotografens eget sjarmtroll - Cleo",
+   "title": "Fotografens eget sjarmtroll - Cleo",
+   "name": "foto-hunden-cleo.jpg"
+  },
+  {
+   "key": "07-babysensor.jpg",
+   "path": "img/07-babysensor.jpg",
+   "alt": "Nyfødt baby i en seng med babysensor over",
+   "caption": "BabySensor utvikles i Vestfold",
+   "title": "BabySensor utvikles i Vestfold",
+   "name": "produktfoto-babysensor-vestfold.jpg"
+  },
+  {
+   "key": "08-hovedbilde.jpg",
+   "path": "img/08-hovedbilde.jpg",
+   "alt": "To glade personer foran Sandefjord Næringsforening i kveldslys",
+   "caption": "",
+   "title": "SNF/Gründeriet – hovedbilde",
+   "name": "sandefjord-naeringsforening-to-personer-i-gagata.jpg"
+  },
+  {
+   "key": "08-velkommen-snf-poster.jpg",
+   "path": "img/08-velkommen-snf-poster.jpg",
+   "alt": "",
+   "caption": "",
+   "title": "Velkommen til Sandefjord Næringsforening – stillbilde",
+   "name": "film-velkommen-til-sandefjord-naeringsforening.jpg"
+  },
+  {
+   "key": "08-velkommen-snf.mp4",
+   "path": "img/08-velkommen-snf.mp4",
+   "alt": "",
+   "caption": "Velkommen til Sandefjord Næringsforening",
+   "title": "Velkommen til Sandefjord Næringsforening",
+   "poster": "08-velkommen-snf-poster.jpg",
+   "name": "film-velkommen-til-sandefjord-naeringsforening.mp4"
+  },
+  {
+   "key": "08-to-med-glass.jpg",
+   "path": "img/08-to-med-glass.jpg",
+   "alt": "Lars og Benedicte smiler til kameraet med et glass i hånden",
+   "caption": "Lars og Benedicte - to kjente fjes i byen",
+   "title": "Lars og Benedicte - to kjente fjes i byen",
+   "name": "portrett-lars-og-benedicte-sandefjord.jpg"
+  },
+  {
+   "key": "08-stjerne-ordforer.jpg",
+   "path": "img/08-stjerne-ordforer.jpg",
+   "alt": "Ordføreren leser opp tale ved avdukingen av en ny stjerne i gågata i Sandefjord",
+   "caption": "Ordføreren ”avduker” ny stjerne i gågata i Sandefjord",
+   "title": "Ordføreren ”avduker” ny stjerne i gågata i Sandefjord",
+   "name": "ordforer-avduker-stjerne-gagata-sandefjord.jpg"
+  },
+  {
+   "key": "08-kort-poster.jpg",
+   "path": "img/08-kort-poster.jpg",
+   "alt": "",
+   "caption": "",
+   "title": "Her ønskes vi velkommen til Gründeriet – stillbilde",
+   "name": "film-velkommen-til-grunderiet-sandefjord.jpg"
+  },
+  {
+   "key": "08-kort.mp4",
+   "path": "img/08-kort.mp4",
+   "alt": "",
+   "caption": "Her ønskes vi velkommen til Gründeriet",
+   "title": "Her ønskes vi velkommen til Gründeriet",
+   "poster": "08-kort-poster.jpg",
+   "name": "film-velkommen-til-grunderiet-sandefjord.mp4"
+  },
+  {
+   "key": "09-hovedbilde.jpg",
+   "path": "img/09-hovedbilde.jpg",
+   "alt": "Svart-hvitt bilde av en bonde som leder en okse gjennom dyp snø i Sveits",
+   "caption": "",
+   "title": "Pauls historie – hovedbilde",
+   "name": "svart-hvitt-bonde-med-okse-i-sno-sveits.jpg"
+  },
+  {
+   "key": "09-barndoms-dal-1.jpg",
+   "path": "img/09-barndoms-dal-1.jpg",
+   "alt": "Grønn dal med gårder og fjell i bakgrunnen i Toggenburg i Sveits",
+   "caption": "Min barndoms grønne dal - Toggenburg",
+   "title": "Min barndoms grønne dal - Toggenburg",
+   "name": "landskap-toggenburg-sveits.jpg"
+  },
+  {
+   "key": "09-paul-student.jpg",
+   "path": "img/09-paul-student.jpg",
+   "alt": "Svart-hvitt bilde av Paul Sutter som ung student, sittende på en stolpe",
+   "caption": "Meg som ung student ved Kunst og Håndverksskolen i Zürich",
+   "title": "Meg som ung student ved Kunst og Håndverksskolen i Zürich",
+   "name": "paul-sutter-som-student-zurich.jpg"
+  },
+  {
+   "key": "09-vinter-sveits.jpg",
+   "path": "img/09-vinter-sveits.jpg",
+   "alt": "Svart-hvitt vinterlandskap med spor i snøen og tåke over dalen i Sveits",
+   "caption": "Vinterlandskap fra mine hjemtrakter",
+   "title": "Vinterlandskap fra mine hjemtrakter",
+   "name": "vinterlandskap-sveits.jpg"
+  },
+  {
+   "key": "09-jungfraujoch.jpg",
+   "path": "img/09-jungfraujoch.jpg",
+   "alt": "Spiss, snødekt fjelltopp som lyses opp av kveldssol i Sveits",
+   "caption": "Dagens siste solstreif på Jungfraujoch 3463 meter over havet",
+   "title": "Dagens siste solstreif på Jungfraujoch 3463 meter over havet",
+   "name": "fjelltopp-i-kveldssol-sveits.jpg"
+  },
+  {
+   "key": "00-forsidebilde.jpg",
+   "path": "img/00-forsidebilde.jpg",
+   "alt": "Kamera på stativ og to droner i lufta over sjøen",
+   "caption": "",
+   "title": "Forsidebilde",
+   "name": "fotograf-paul-sutter-kamera-og-droner-sandefjord.jpg"
+  },
+  {
+   "key": "paul-kontakt.png",
+   "path": "img/paul-kontakt.png",
+   "alt": "Paul Sutter med kamera, tegnet i blått",
+   "caption": "",
+   "title": "Paul Sutter",
+   "name": "paul-sutter-fotograf-sandefjord.png"
+  },
+  {
+   "key": "optimera.png",
+   "path": "logos/optimera.png",
+   "alt": "Optimera",
+   "caption": "",
+   "title": "Optimera – logo",
+   "name": "optimera-logo.png"
+  },
+  {
+   "key": "hovik-lys.png",
+   "path": "logos/hovik-lys.png",
+   "alt": "Høvik Lys",
+   "caption": "",
+   "title": "Høvik Lys – logo",
+   "name": "hovik-lys-logo.png"
+  },
+  {
+   "key": "envieco.png",
+   "path": "logos/envieco.png",
+   "alt": "Envieco",
+   "caption": "",
+   "title": "Envieco – logo",
+   "name": "envieco-logo.png"
+  },
+  {
+   "key": "nordpeis.png",
+   "path": "logos/nordpeis.png",
+   "alt": "Nordpeis",
+   "caption": "",
+   "title": "Nordpeis – logo",
+   "name": "nordpeis-logo.png"
+  },
+  {
+   "key": "norsk-vvs-merking.png",
+   "path": "logos/norsk-vvs-merking.png",
+   "alt": "Norsk VVS-merking",
+   "caption": "",
+   "title": "Norsk VVS-merking – logo",
+   "name": "norsk-vvs-merking-logo.png"
+  },
+  {
+   "key": "wilfa.png",
+   "path": "logos/wilfa.png",
+   "alt": "Wilfa",
+   "caption": "",
+   "title": "Wilfa – logo",
+   "name": "wilfa-logo.png"
+  },
+  {
+   "key": "stabburet.png",
+   "path": "logos/stabburet.png",
+   "alt": "Stabburet",
+   "caption": "",
+   "title": "Stabburet – logo",
+   "name": "stabburet-logo.png"
+  },
+  {
+   "key": "bryde.png",
+   "path": "logos/bryde.png",
+   "alt": "Bryde Begravelsesbyrå",
+   "caption": "",
+   "title": "Bryde Begravelsesbyrå – logo",
+   "name": "bryde-logo.png"
+  },
+  {
+   "key": "monter.png",
+   "path": "logos/monter.png",
+   "alt": "Montér",
+   "caption": "",
+   "title": "Montér – logo",
+   "name": "monter-logo.png"
+  },
+  {
+   "key": "nordea.png",
+   "path": "logos/nordea.png",
+   "alt": "Nordea",
+   "caption": "",
+   "title": "Nordea – logo",
+   "name": "nordea-logo.png"
+  },
+  {
+   "key": "coop.png",
+   "path": "logos/coop.png",
+   "alt": "Coop",
+   "caption": "",
+   "title": "Coop – logo",
+   "name": "coop-logo.png"
+  },
+  {
+   "key": "snf.png",
+   "path": "logos/snf.png",
+   "alt": "Sandefjord Næringsforening",
+   "caption": "",
+   "title": "Sandefjord Næringsforening – logo",
+   "name": "snf-logo.png"
+  },
+  {
+   "key": "lund.png",
+   "path": "logos/lund.png",
+   "alt": "Lund",
+   "caption": "",
+   "title": "Lund – logo",
+   "name": "lund-logo.png"
+  },
+  {
+   "key": "kanda.png",
+   "path": "logos/kanda.png",
+   "alt": "Kanda",
+   "caption": "",
+   "title": "Kanda – logo",
+   "name": "kanda-logo.png"
+  },
+  {
+   "key": "rehabil.png",
+   "path": "logos/rehabil.png",
+   "alt": "Rehabil",
+   "caption": "",
+   "title": "Rehabil – logo",
+   "name": "rehabil-logo.png"
+  },
+  {
+   "key": "mitsubishi.png",
+   "path": "logos/mitsubishi.png",
+   "alt": "Mitsubishi Motors",
+   "caption": "",
+   "title": "Mitsubishi Motors – logo",
+   "name": "mitsubishi-logo.png"
+  },
+  {
+   "key": "hovdokka.png",
+   "path": "logos/hovdokka.png",
+   "alt": "Hovdokka",
+   "caption": "",
+   "title": "Hovdokka – logo",
+   "name": "hovdokka-logo.png"
+  },
+  {
+   "key": "prior.png",
+   "path": "logos/prior.png",
+   "alt": "Prior",
+   "caption": "",
+   "title": "Prior – logo",
+   "name": "prior-logo.png"
+  },
+  {
+   "key": "ford.png",
+   "path": "logos/ford.png",
+   "alt": "Ford",
+   "caption": "",
+   "title": "Ford – logo",
+   "name": "ford-logo.png"
+  },
+  {
+   "key": "jernia.png",
+   "path": "logos/jernia.png",
+   "alt": "Jernia",
+   "caption": "",
+   "title": "Jernia – logo",
+   "name": "jernia-logo.png"
+  }
+ ],
+ "pages": [
+  {
+   "slug": "droneopptak-ute-og-inne",
+   "title": "Droneopptak ute og inne",
+   "seo_title": "",
+   "accent": "#387d8d",
+   "hero": "01-hovedbilde.jpg",
+   "text": [
+    "Jeg tilbyr video- og fotoopptak med drone - utendørs og inne.",
+    "Dronen gjør at vi ser motivet fra nye vinkler - noe som gir meg som fotograf uante muligheter.",
+    "Næringslivsbedrifter og andre kan slik presentere seg på en helt ny og annerledes måte. Jeg har laget flere dronevideoer for bedrifter i Sandefjord-regionen.",
+    "Se hvordan de presenteres her."
+   ],
+   "gallery": [
+    "fpv.mp4",
+    "01-kajakk.mp4",
+    "01-bryde.mp4",
+    "01-envieco.mp4"
+   ],
+   "contain": false,
+   "topband": false,
+   "desc": "Droneopptak ute og inne for bedrifter i Sandefjord og Vestfold. Video og foto med drone som viser bedriften fra nye vinkler."
+  },
+  {
+   "slug": "interior-og-eksteriorfoto",
+   "title": "Interiør- og eksteriørfoto",
+   "seo_title": "",
+   "accent": "#527f3d",
+   "hero": "02-hovedbilde.jpg",
+   "text": [
+    "Jeg har samlet mange ulike ”Ute- og inne-opptak her”",
+    "Norpeis har en solid plass i min portefølje.",
+    "I tillegg har jeg gjennom årene hatt mange spennende oppdrag for en lang rekke store og mindre kunder.",
+    "Her kan du se nærmere på flere av mine bilder og motiver."
+   ],
+   "gallery": [
+    "02-trapp.jpg",
+    "02-svingete-vei.jpg",
+    "02-ryen-studio.jpg",
+    "02-kilen-brygge.jpg"
+   ],
+   "contain": false,
+   "topband": false,
+   "desc": "Interiørfoto og eksteriørfoto av boliger, bygg og lokaler i Sandefjord, Vestfold og Oslo. Fotograf Paul Sutter."
+  },
+  {
+   "slug": "modeller-og-portretter",
+   "title": "Modeller og portretter",
+   "seo_title": "",
+   "accent": "#415496",
+   "hero": "03-hovedbilde.jpg",
+   "text": [
+    "Øyeblikket. Følelsen. Stemningen. Å fange dette i et bilde er min – og enhver fotografs klare ambisjon.",
+    "Jeg har fotografert mennesker i alle aldre, fasonger og situasjoner i en årrekke.",
+    "Her kan du se et utvalg av morsomme, fargerike og stemningsfulle bilder av små og store.",
+    "Alle med sitt særpreg og egenart - fanget av kameraet i det riktige øyeblikket."
+   ],
+   "gallery": [
+    "03-anita-hvalmonument.jpg",
+    "03-christer.jpg",
+    "03-ordfrer.jpg",
+    "07-modell-hamresanden.jpg"
+   ],
+   "contain": false,
+   "topband": false,
+   "desc": "Portrettfoto og modellfoto for bedrifter og annonser i Sandefjord og Vestfold. Fotograf Paul Sutter."
+  },
+  {
+   "slug": "produkter",
+   "title": "Produkter",
+   "seo_title": "",
+   "accent": "#b75b16",
+   "hero": "04-hovedbilde.jpg",
+   "text": [
+    "Produktfotografering har jeg lang erfaring med.",
+    "I ”gamle dager” var Coop, Nordea, Norpeis, Wilfa, Høvik Lys og mange andre kunder som jeg betjente over lang tid.",
+    "Noen av disse bildene kan du se her, sammen med nyere bilder.",
+    "Jeg tilbyr fotografering fra eget studio i Sandefjord eller på location hos kunden."
+   ],
+   "gallery": [
+    "04-casa-peis.jpg",
+    "04-dressing.jpg",
+    "04-tip-spesial.jpg",
+    "04-wilfa-mixer.jpg"
+   ],
+   "contain": false,
+   "topband": false,
+   "desc": "Produktfoto for brosjyrer, nettbutikk og annonser. Paul Sutter har fotografert for Nordpeis, Wilfa, Kanda og flere."
+  },
+  {
+   "slug": "mat",
+   "title": "Mat",
+   "seo_title": "",
+   "accent": "#d43d47",
+   "hero": "05-hovedbilde.jpg",
+   "text": [
+    "Matfotografering er i utgangspunktet meget komplisert og utfordrende. Varm mat må se varm ut, og samtidig skal alle matbilder se delikate og innbydende ut.",
+    "Jeg har i en årrekke hatt oppdrag for ulike store og små mataktører.",
+    "Nylig har jeg blant annet tatt alle bildene til ”Den store vaffelboken”.",
+    "Noen av disse vaffelbildene kan du se nærmere på her, pluss at du finner et utvalg av andre matopptak.",
+    "Velbekomme!"
+   ],
+   "gallery": [
+    "05-napoleonskake.jpg",
+    "05-vaffel-ute.jpg",
+    "05-vaffel-inne.jpg",
+    "05-fisk.jpg"
+   ],
+   "contain": false,
+   "topband": false,
+   "desc": "Matfotografering for store og små mataktører, blant annet bildene til «Den store vaffelboken». Fotograf Paul Sutter, Sandefjord."
+  },
+  {
+   "slug": "diverse",
+   "title": "Diverse",
+   "seo_title": "",
+   "accent": "#1c8282",
+   "hero": "07-hovedbilde.jpg",
+   "text": [
+    "Mange av bildene som jeg har tatt opp gjennom årene, kan tilhøre flere kategorier.",
+    "I tillegg til de tre originale kuene, har vi samlet en miks med den søte hunden Cleo og andre dyr, mennesker og produkter.",
+    "Det har blitt til en fargerik og morsom miks av gammelt og nytt.",
+    "God fornøyelse!"
+   ],
+   "gallery": [
+    "07-twin-towers.jpg",
+    "07-vy-grefsen.jpg",
+    "07-cleo.jpg",
+    "07-babysensor.jpg"
+   ],
+   "contain": false,
+   "topband": false,
+   "desc": "Et utvalg bilder fra fotograf Paul Sutter: landskap, natur, flyfoto og oppdrag i Norge og utlandet."
+  },
+  {
+   "slug": "snf-grunderiet",
+   "title": "SNF/Gründeriet",
+   "seo_title": "SNF og Gründeriet",
+   "accent": "#790025",
+   "hero": "08-hovedbilde.jpg",
+   "text": [
+    "Jeg er medlem av Sandefjord Nærings-forening - SNF. Dette er den viktigste møteplassen for næringslivet i Sandefjord og omegn.",
+    "SNF gjennomfører årlig et betydelig antall arrangementer med stort mangfold av temaer og dyktige foredragsholdere.",
+    "Gründeriet i Sandefjord er møteplassen for gründere, etablerere og nyskapere.",
+    "De støtter gjennom hele gründerreisen med nettverk, kompetanse og et levende fellesskap. Jeg setter stor pris på å kunne være en del av dette kreative nettverket i byen."
+   ],
+   "gallery": [
+    "08-velkommen-snf.mp4",
+    "08-to-med-glass.jpg",
+    "08-stjerne-ordforer.jpg",
+    "08-kort.mp4"
+   ],
+   "contain": false,
+   "topband": false,
+   "desc": "Fotograf Paul Sutter er medlem av Sandefjord Næringsforening og en del av nettverket på Gründeriet i Sandefjord."
+  },
+  {
+   "slug": "pauls-historie",
+   "title": "Pauls historie",
+   "seo_title": "",
+   "accent": "#74784d",
+   "hero": "09-hovedbilde.jpg",
+   "text": [
+    "Jeg kommer opprinnelig fra Sveits og er utdannet fotograf fra Kunst og Håndverks-skolen i Zürich.",
+    "Ferdig utdannet satte jeg kurs for Norden – men før jeg «gjorde nordmann av meg” arbeidet jeg i fire år som mote- og produktfotograf i Sverige.",
+    "Her kan du se noen av bildene mine tatt i Sveits, som oksen som trekker snøplogen på syttitallet, majestetiske Jungfraujoch og flere.",
+    "I dag er jeg fascinert av video-fotografering med droner, samtidig som jeg tilbyr mine øvrige tjenester, primært til Sandefjord og Vestfold-regionen, men også til andre deler av landet."
+   ],
+   "gallery": [
+    "09-barndoms-dal-1.jpg",
+    "09-paul-student.jpg",
+    "09-vinter-sveits.jpg",
+    "09-jungfraujoch.jpg"
+   ],
+   "contain": true,
+   "topband": true,
+   "desc": "Paul Sutter er utdannet fotograf fra Zürich og har jobbet som fotograf i Norge og Sverige i over 50 år."
+  }
+ ],
+ "front": {
+  "title": "Paul Sutter - din bedrifts fotograf i Vestfold",
+  "hero": "00-forsidebilde.jpg",
+  "desc": "Paul Sutter er bedriftsfotograf i Sandefjord og Vestfold. Foto, video og drone – kvalitetsfotografering i over 50 år."
+ },
+ "contact": {
+  "title": "Kontakt meg for avtale, pris eller befaring",
+  "menu": "Kontakt",
+  "slug": "kontakt",
+  "seo_title": "Kontakt",
+  "image": "paul-kontakt.png",
+  "text": "Telefon besvares mellom 09:00 og 17:00, mandag til fredag. Utenom arbeidstiden kan du bruke kontaktskjemaet her eller sende en mail.",
+  "desc": "Kontakt fotograf Paul Sutter i Sandefjord for avtale, pris eller befaring. Telefon +47 906 86 047."
+ },
+ "logos": [
+  "optimera.png",
+  "hovik-lys.png",
+  "envieco.png",
+  "nordpeis.png",
+  "norsk-vvs-merking.png",
+  "wilfa.png",
+  "stabburet.png",
+  "bryde.png",
+  "monter.png",
+  "nordea.png",
+  "coop.png",
+  "snf.png",
+  "lund.png",
+  "kanda.png",
+  "rehabil.png",
+  "mitsubishi.png",
+  "hovdokka.png",
+  "prior.png",
+  "ford.png",
+  "jernia.png"
+ ]
+}
