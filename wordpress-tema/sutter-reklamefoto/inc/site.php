@@ -137,3 +137,13 @@ add_action( 'after_setup_theme', function () {
 	remove_action( 'wp_footer', 'wp_enqueue_global_styles', 1 );
 	remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
 } );
+
+/* The watermark plugin keeps the originals without watermark in uploads/iw-backup: keep that folder closed to visitors */
+add_action( 'admin_init', function () {
+	$up  = wp_upload_dir();
+	$dir = trailingslashit( $up['basedir'] ) . 'iw-backup';
+	$ht  = $dir . '/.htaccess';
+	if ( is_dir( $dir ) && ! file_exists( $ht ) ) {
+		file_put_contents( $ht, "# Originaler uten vannmerke\n<IfModule mod_authz_core.c>\nRequire all denied\n</IfModule>\n<IfModule !mod_authz_core.c>\nOrder allow,deny\nDeny from all\n</IfModule>\n" ); // phpcs:ignore
+	}
+} );
